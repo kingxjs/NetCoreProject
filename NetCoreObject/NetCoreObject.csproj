@@ -40,11 +40,32 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\lib\layui-2.3.0\font\iconfont.svg" />
+    <None Include="wwwroot\lib\layui-2.3.0\layui.all.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\layui.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\carousel.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\code.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\element.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\flow.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\form.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\jquery.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\laydate.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\layedit.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\layer.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\laypage.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\laytpl.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\mobile.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\rate.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\table.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\tree.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\upload.js" />
+    <None Include="wwwroot\lib\layui-2.3.0\lay\modules\util.js" />
     <None Include="wwwroot\lib\layui\font\iconfont.svg" />
     <None Include="wwwroot\lib\layui\layui.all.js" />
     <None Include="wwwroot\lib\layui\layui.js" />
     <None Include="wwwroot\lib\layui\lay\modules\carousel.js" />
     <None Include="wwwroot\lib\layui\lay\modules\code.js" />
+    <None Include="wwwroot\lib\layui\lay\modules\colorpicker.js" />
     <None Include="wwwroot\lib\layui\lay\modules\element.js" />
     <None Include="wwwroot\lib\layui\lay\modules\flow.js" />
     <None Include="wwwroot\lib\layui\lay\modules\form.js" />
@@ -56,6 +77,7 @@
     <None Include="wwwroot\lib\layui\lay\modules\laytpl.js" />
     <None Include="wwwroot\lib\layui\lay\modules\mobile.js" />
     <None Include="wwwroot\lib\layui\lay\modules\rate.js" />
+    <None Include="wwwroot\lib\layui\lay\modules\slider.js" />
     <None Include="wwwroot\lib\layui\lay\modules\table.js" />
     <None Include="wwwroot\lib\layui\lay\modules\tree.js" />
     <None Include="wwwroot\lib\layui\lay\modules\upload.js" />
@@ -171,6 +193,12 @@
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="Areas\Admin\Views\Goods\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\SysAdmin\Views\SysMessage\Change.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Areas\SysAdmin\Views\SysMessage\SendIndex.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
     <Content Update="wwwroot\fonts\iconfont.eot">

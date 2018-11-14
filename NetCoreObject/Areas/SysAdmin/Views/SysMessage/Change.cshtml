@@ -1,0 +1,107 @@
+﻿@using NetCoreObject.Core
+@model SysMessage
+@{
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+}
+<style>
+
+
+    .layui-input-inline {
+        width: 370px !important;
+    }
+</style>
+<form class="layui-form" lay-filter="userForm">
+    @Html.HiddenFor(model => model.ID)
+    @*@Html.HiddenFor(model => model.ParentID)*@
+    <div class="layui-form-item">
+        <label for="Title" class="layui-form-label">
+            <span class="x-red">*</span>标题
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Title" name="Title" required="" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@Model.Title">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="Type" class="layui-form-label">
+            类型
+        </label>
+        <div class="layui-input-inline">
+            <select name="Type" id="Type" lay-filter="Type">
+                <option value="2" @(Model.Type == 2 ? "selected" : "")>私信</option>
+                <option value="1" @(Model.Type == 1 ? "selected" : "")>通知</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="UserID" class="layui-form-label">
+            接收用户
+        </label>
+        <div class="layui-input-inline">
+            <select multiple="multiple" lay-filter="test">
+                <option value=""></option>
+                <option value="0">写作</option>
+                <option value="1">阅读</option>
+                <option value="2">游戏</option>
+                <option value="3">音乐</option>
+                <option value="4">旅行</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="Content" class="layui-form-label">
+            内容
+        </label>
+        <div class="layui-input-block">
+            <textarea name="Content" id="Content" placeholder="请输入内容" class="layui-textarea">@Model.Content</textarea>
+        </div>
+    </div>
+    <div class="layui-form-item  layui-hide">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <input type="button" lay-submit="" lay-filter="form-submit" id="form-submit" value="保存">
+    </div>
+</form>
+
+<script>
+    layui.use(['form', 'layer', 'layedit', 'multiSelect'], function () {
+        $ = layui.jquery;
+        var form = layui.form
+            , layer = layui.layer
+            , layedit = layui.layedit
+            , multiSelect = layui.multiSelect;
+
+        form.on('select(test)', function (data) {
+            console.dir(data);
+        })
+
+        layedit.build('Content'); //建立编辑器
+        //监听提交
+        form.on('submit(form-submit)', function (data) {
+            $.ajax({
+                'type': 'post',
+                'url': '/SysAdmin/SysMessage/ChangeSubmit',
+                'data': data.field,
+                //async: false,
+                error: function (message) {
+                    x_admin_msg("保存失败");
+                    console.info(message)
+                },
+                success: function (data) {
+                    console.info(data)
+                    if (data.status == 200) {
+                        x_admin_alert("保存成功", { icon: 6 }, function (iindex) {
+                            x_admin_close_index(iindex)
+                            x_admin_close();
+                        });
+                    } else {
+                        x_admin_msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+
+
+    });
+</script>

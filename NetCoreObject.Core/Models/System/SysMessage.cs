@@ -15,6 +15,10 @@ namespace NetCoreObject.Core
         [SugarColumn(IsNullable = false, IsPrimaryKey = true)]
         public string ID { get; set; }
         /// <summary>
+        /// 发送者消息ID
+        /// </summary>
+        public string SendMID { get; set; }
+        /// <summary>
         /// 发送人
         /// </summary>
         public string SenderID { get; set; }
@@ -43,11 +47,11 @@ namespace NetCoreObject.Core
         /// </summary>
         public DateTime CreateTime { get; set; }
         /// <summary>
-        /// 消息类型，1：通知，2：私信
+        /// 消息类型，1：通知，2：私信，3：我发送的通知，4：我发送的私信
         /// </summary>
         public int Type { get; set; }
         /// <summary>
-        /// 状态, 0：未读，1：已读
+        /// 状态, 0：未读，1：已读，2：删除
         /// </summary>
         public int Status { get; set; } = 0;
 

@@ -38,13 +38,26 @@ namespace NetCoreObject.Areas.SysAdmin.Controllers
                     model.ParentID = pid;
                     model.ID = "";
                 }
-                var List = db.Queryable<SysModule>().Where(m => m.ID != model.ID).ToList();
-                ViewBag.List = JsonConvert.Serialize(o.GetSysModuleJson(List, "0"));
             });
-
-
-
             return View(model);
+        }
+
+        public List<object> GetModuleListJson(string id)
+        {
+            var list = new List<object>();
+            Service.Command<Outsourcing>((db, o) =>
+            {
+                if (string.IsNullOrEmpty(id))
+                {
+                    id = "";
+                }
+                var List = db.Queryable<SysModule>().Where(m => m.ID != id)
+                        .OrderBy(m => m.Type)
+                        .OrderBy(m => m.Sort, OrderByType.Desc)
+                        .OrderBy(m => m.CreateTime, OrderByType.Asc).ToList();
+                list = o.GetSysModuleJson(List, "0");
+            });
+            return list;
         }
 
         public JsonResult GetList(string Name)

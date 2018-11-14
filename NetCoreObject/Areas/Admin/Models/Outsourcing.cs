@@ -15,12 +15,28 @@ namespace NetCoreObject
             {
                 foreach (var item in menuList.Where(m => m.ParentID == ParentID))
                 {
-                    children.Add(new
+                    var childrens = GetSysModuleJson(menuList, item.ID);
+                    if (childrens.Count > 0)
                     {
-                        name = item.Name,
-                        id = item.ID,
-                        children = GetSysModuleJson(menuList, item.ID)
-                    });
+                        children.Add(new
+                        {
+                            name = item.Name,
+                            id = item.ID,
+                            children = childrens,
+                            open = false,
+                            @checked = false
+                        });
+                    }
+                    else
+                    {
+                        children.Add(new
+                        {
+                            name = item.Name,
+                            id = item.ID,
+                            open = false,
+                            @checked = false
+                        });
+                    }
                 }
             }
             return children;

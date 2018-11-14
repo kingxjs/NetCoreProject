@@ -53,3 +53,17 @@ H:\Object\NetCoreObjectSimple\NetCoreObject.Services\obj\Debug\netcoreapp2.0\Net
 H:\Object\NetCoreObjectSimple\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.csproj.CopyComplete
 H:\Object\NetCoreObjectSimple\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.dll
 H:\Object\NetCoreObjectSimple\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.pdb
+G:\git\NetCoreProject\NetCoreObject.Services\bin\Debug\netcoreapp2.0\NetCoreObject.Services.deps.json
+G:\git\NetCoreProject\NetCoreObject.Services\bin\Debug\netcoreapp2.0\NetCoreObject.Services.dll
+G:\git\NetCoreProject\NetCoreObject.Services\bin\Debug\netcoreapp2.0\NetCoreObject.Services.pdb
+G:\git\NetCoreProject\NetCoreObject.Services\bin\Debug\netcoreapp2.0\NetCoreObject.Common.dll
+G:\git\NetCoreProject\NetCoreObject.Services\bin\Debug\netcoreapp2.0\NetCoreObject.Core.dll
+G:\git\NetCoreProject\NetCoreObject.Services\bin\Debug\netcoreapp2.0\NetCoreObject.Common.pdb
+G:\git\NetCoreProject\NetCoreObject.Services\bin\Debug\netcoreapp2.0\NetCoreObject.Core.pdb
+G:\git\NetCoreProject\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.csprojAssemblyReference.cache
+G:\git\NetCoreProject\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.csproj.CoreCompileInputs.cache
+G:\git\NetCoreProject\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.AssemblyInfoInputs.cache
+G:\git\NetCoreProject\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.AssemblyInfo.cs
+G:\git\NetCoreProject\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.csproj.CopyComplete
+G:\git\NetCoreProject\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.dll
+G:\git\NetCoreProject\NetCoreObject.Services\obj\Debug\netcoreapp2.0\NetCoreObject.Services.pdb

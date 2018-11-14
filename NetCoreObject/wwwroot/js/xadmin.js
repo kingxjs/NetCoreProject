@@ -11,7 +11,9 @@ $(function () {
         x_admin_msg("复制失败")
     });
 
-
+    layui.config({
+        base: '/lib/layui-modules/',
+    })
 
     //加载弹出层
     layui.use(['form', 'element', 'jtagsinput'],
@@ -227,6 +229,7 @@ $(function () {
                     tabList[i].id = "";
                 }
             }
+            element.tabChange('xbs_tab', 0);
             sessionStorage.tabList = JSON.stringify(tabList);
         }, refreshThisTabs: function () {//刷新当前
             var lay_id = $(".layui-tab-title").find("li.layui-this").attr("lay-id");
@@ -438,10 +441,6 @@ $(function () {
             setTab(THIS);
         }
     });
-
-
-
-
     function getParentText(THIS) {
         var breadcrumb = [];
         var text = $(THIS).children("a").children("cite").text();
@@ -500,16 +499,6 @@ $(function () {
             }
         }
     })
-    //$(".layer-tips").hover(function () {
-    //    var msg = $(this).attr("placeholder");
-    //    if (msg) {
-    //        tipsi = layer.tips(msg, this, { time: 0 });
-    //    }
-    //}, function () {
-    //    if (tipsi) {
-    //        layer.close(tipsi);
-    //    }
-    //});
 })
 
 
@@ -525,20 +514,25 @@ function getCateId(cateId) {
     });
 }
 function RefreshCache() {
-    $.ajax({
-        'type': 'post',
-        'url': '/SysAdmin/Home/RefreshCache',
-        error: function (message) {
-            console.info(message)
-        },
-        success: function (data) {
-            if (data.status == 200) {
-                x_admin_msg("已清理");
-            } else {
-                x_admin_msg(data.msg);
+    x_admin_confirm('清除缓存会关闭所有页面！', function (index) {
+        tab.closeAllTabs();
+        $.ajax({
+            'type': 'post',
+            'url': '/SysAdmin/Home/RefreshCache',
+            error: function (message) {
+                console.info(message)
+            },
+            success: function (data) {
+                if (data.status == 200) {
+                    x_admin_msg("已清理");
+                } else {
+                    x_admin_msg(data.msg);
+                }
+                x_admin_close_index(index);
             }
-        }
+        });
     });
+
 }
 
 /*弹出层*/
@@ -620,7 +614,7 @@ function x_admin_show(alayer, title, url, w, h, s, e) {
     });
 }
 //带有确认取消按钮
-function x_admin_show_btn(alayer,title, url, w, h, s, e) {
+function x_admin_show_btn(alayer, title, url, w, h, s, e) {
     if (!s) {
         s = false;
     }

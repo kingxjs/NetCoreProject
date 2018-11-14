@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/include/_Layout.cshtml";
+}
+<div class="x-body">
+    <div class="layui-row">
+        <div class="layui-form layui-col-md12 x-so demoTable">
+            <input type="text" name="Name" id="Name" placeholder="请输入标题" autocomplete="off" class="layui-input" style="width:200px">
+            <button class="layui-btn" data-type="reload"><i class="layui-icon">&#xe615;</i></button>
+        </div>
+    </div>
+    <xblock class="demoTable">
+        <button class="layui-btn layui-btn-danger" data-type="delAll"><i class="layui-icon"></i>批量删除</button>
+        <button class="layui-btn" onclick="x_admin_this_show_btn('添加消息','/SysAdmin/SysMessage/Change',900,700,false,reload)"><i class="layui-icon"></i>添加</button>
+        <button class="layui-btn" onclick="reload()"><i class="layui-icon layui-icon-refresh" style="font-size: 14px;"></i>刷新</button>
+    </xblock>
+    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+        <ul class="layui-tab-title">
+            <li class="layui-this">全部</li>
+            <li>通知</li>
+            <li>私信</li>
+        </ul>
+        <div class="layui-tab-content" style="height: 100px;">
+            <div class="layui-tab-item layui-show">
+                <table id="ListAll" class="layui-table" lay-filter="ListAll"></table>
+            </div>
+            <div class="layui-tab-item">
+                <table id="ListAllType1" class="layui-table" lay-filter="ListAllType1"></table>
+            </div>
+            <div class="layui-tab-item">
+                <table id="ListAllType2" class="layui-table" lay-filter="ListAllType2"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function reload() {
+        layui.table.reload("userTable")
+    }
+    layui.use('table', function () {
+        var table = layui.table;
+
+        table.render({
+            elem: '#ListAll'
+            , url: '/SysAdmin/SysMessage/GetSendList'
+            , cols: [[
+                { checkbox: true }
+                , { field: 'Title', title: '标题' }
+                , { field: 'CreateTime_toString', title: '时间', sort: true }
+            ]]
+            , page: true
+            , where: { 'Type': 0 }
+        });
+        table.render({
+            elem: '#ListAllType1'
+            , url: '/SysAdmin/SysMessage/GetSendList'
+            , cols: [[
+                { checkbox: true }
+                , { field: 'Title', title: '标题' }
+                , { field: 'CreateTime_toString', title: '时间', sort: true }
+            ]]
+            , page: true
+            , where: { 'Type': 1 }
+        });
+        table.render({
+            elem: '#ListAllType2'
+            , url: '/SysAdmin/SysMessage/GetSendList'
+            , cols: [[
+                { checkbox: true }
+                , { field: 'Title', title: '标题' }
+                , { field: 'CreateTime_toString', title: '时间', sort: true }
+            ]]
+            , page: true
+            , where: { 'Type': 2 }
+        });
+    });
+</script>

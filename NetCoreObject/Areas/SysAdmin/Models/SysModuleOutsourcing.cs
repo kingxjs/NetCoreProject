@@ -30,10 +30,18 @@ namespace NetCoreObject
                     {
                         if (item.ID == i) //判断是否是头如果上升则不做处理
                         {
+                            if (item.Sort == 0)
+                            {
+                                item.Sort = 1;
+                            }
                             if (o == 1) //下降一位
                             {
                                 a = Convert.ToInt32(item.Sort);
                                 b = Convert.ToInt32(list[index].Sort);
+                                if (a == b)
+                                {
+                                    a--;
+                                }
                                 c = a;
                                 a = b;
                                 b = c;
@@ -50,10 +58,18 @@ namespace NetCoreObject
                     {
                         if (item.ID == i) //最后一条如果下降则不做处理
                         {
+                            if (list[index - 2].Sort == 0)
+                            {
+                                list[index - 2].Sort = 1;
+                            }
                             if (o == 0) //上升一位
                             {
                                 a = Convert.ToInt32(item.Sort);
                                 b = Convert.ToInt32(list[index - 2].Sort);
+                                if (a == b)
+                                {
+                                    a++;
+                                }
                                 c = a;
                                 a = b;
                                 b = c;
@@ -72,8 +88,16 @@ namespace NetCoreObject
                         {
                             if (o == 1) //下降一位
                             {
+                                if (item.Sort == 0)
+                                {
+                                    item.Sort = 1;
+                                }
                                 a = Convert.ToInt32(item.Sort);
                                 b = Convert.ToInt32(list[index].Sort);
+                                if (a == b)
+                                {
+                                    a--;
+                                }
                                 c = a;
                                 a = b;
                                 b = c;
@@ -86,8 +110,16 @@ namespace NetCoreObject
                             }
                             else
                             {
+                                if (list[index - 2].Sort == 0)
+                                {
+                                    list[index - 2].Sort = 1;
+                                }
                                 a = Convert.ToInt32(item.Sort);
                                 b = Convert.ToInt32(list[index - 2].Sort);
+                                if (a == b)
+                                {
+                                    a++;
+                                }
                                 c = a;
                                 a = b;
                                 b = c;

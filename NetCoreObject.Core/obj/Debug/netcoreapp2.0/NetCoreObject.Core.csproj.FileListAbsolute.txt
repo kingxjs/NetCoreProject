@@ -34,3 +34,12 @@ H:\Object\NetCoreObjectSimple\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCore
 H:\Object\NetCoreObjectSimple\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.AssemblyInfo.cs
 H:\Object\NetCoreObjectSimple\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.dll
 H:\Object\NetCoreObjectSimple\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.pdb
+G:\git\NetCoreProject\NetCoreObject.Core\bin\Debug\netcoreapp2.0\NetCoreObject.Core.deps.json
+G:\git\NetCoreProject\NetCoreObject.Core\bin\Debug\netcoreapp2.0\NetCoreObject.Core.dll
+G:\git\NetCoreProject\NetCoreObject.Core\bin\Debug\netcoreapp2.0\NetCoreObject.Core.pdb
+G:\git\NetCoreProject\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.csprojAssemblyReference.cache
+G:\git\NetCoreProject\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.csproj.CoreCompileInputs.cache
+G:\git\NetCoreProject\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.AssemblyInfoInputs.cache
+G:\git\NetCoreProject\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.AssemblyInfo.cs
+G:\git\NetCoreProject\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.dll
+G:\git\NetCoreProject\NetCoreObject.Core\obj\Debug\netcoreapp2.0\NetCoreObject.Core.pdb
