@@ -4705,11 +4705,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Core\\NetCoreObject.Core.csproj",
+      "projectUniqueName": "G:\\git\\NetCoreProject\\NetCoreObject.Core\\NetCoreObject.Core.csproj",
       "projectName": "NetCoreObject.Core",
-      "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Core\\NetCoreObject.Core.csproj",
+      "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject.Core\\NetCoreObject.Core.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Core\\obj\\",
+      "outputPath": "G:\\git\\NetCoreProject\\NetCoreObject.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

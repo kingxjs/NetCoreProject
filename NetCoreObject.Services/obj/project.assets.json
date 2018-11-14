@@ -6905,11 +6905,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Services\\NetCoreObject.Services.csproj",
+      "projectUniqueName": "G:\\git\\NetCoreProject\\NetCoreObject.Services\\NetCoreObject.Services.csproj",
       "projectName": "NetCoreObject.Services",
-      "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Services\\NetCoreObject.Services.csproj",
+      "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject.Services\\NetCoreObject.Services.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Services\\obj\\",
+      "outputPath": "G:\\git\\NetCoreProject\\NetCoreObject.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6928,11 +6928,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Common\\NetCoreObject.Common.csproj": {
-              "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Common\\NetCoreObject.Common.csproj"
+            "G:\\git\\NetCoreProject\\NetCoreObject.Common\\NetCoreObject.Common.csproj": {
+              "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject.Common\\NetCoreObject.Common.csproj"
             },
-            "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Core\\NetCoreObject.Core.csproj": {
-              "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Core\\NetCoreObject.Core.csproj"
+            "G:\\git\\NetCoreProject\\NetCoreObject.Core\\NetCoreObject.Core.csproj": {
+              "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject.Core\\NetCoreObject.Core.csproj"
             }
           }
         }

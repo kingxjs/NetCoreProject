@@ -14120,11 +14120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject\\NetCoreObject.csproj",
+      "projectUniqueName": "G:\\git\\NetCoreProject\\NetCoreObject\\NetCoreObject.csproj",
       "projectName": "NetCoreObject",
-      "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject\\NetCoreObject.csproj",
+      "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject\\NetCoreObject.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject\\obj\\",
+      "outputPath": "G:\\git\\NetCoreProject\\NetCoreObject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14143,14 +14143,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Common\\NetCoreObject.Common.csproj": {
-              "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Common\\NetCoreObject.Common.csproj"
+            "G:\\git\\NetCoreProject\\NetCoreObject.Common\\NetCoreObject.Common.csproj": {
+              "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject.Common\\NetCoreObject.Common.csproj"
             },
-            "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Core\\NetCoreObject.Core.csproj": {
-              "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Core\\NetCoreObject.Core.csproj"
+            "G:\\git\\NetCoreProject\\NetCoreObject.Core\\NetCoreObject.Core.csproj": {
+              "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject.Core\\NetCoreObject.Core.csproj"
             },
-            "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Services\\NetCoreObject.Services.csproj": {
-              "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Services\\NetCoreObject.Services.csproj"
+            "G:\\git\\NetCoreProject\\NetCoreObject.Services\\NetCoreObject.Services.csproj": {
+              "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject.Services\\NetCoreObject.Services.csproj"
             }
           }
         }

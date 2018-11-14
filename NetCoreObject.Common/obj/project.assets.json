@@ -6240,11 +6240,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Common\\NetCoreObject.Common.csproj",
+      "projectUniqueName": "G:\\git\\NetCoreProject\\NetCoreObject.Common\\NetCoreObject.Common.csproj",
       "projectName": "NetCoreObject.Common",
-      "projectPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Common\\NetCoreObject.Common.csproj",
+      "projectPath": "G:\\git\\NetCoreProject\\NetCoreObject.Common\\NetCoreObject.Common.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "H:\\Object\\NetCoreObjectSimple\\NetCoreObject.Common\\obj\\",
+      "outputPath": "G:\\git\\NetCoreProject\\NetCoreObject.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
