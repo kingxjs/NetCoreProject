@@ -1,0 +1,21 @@
+***********Begin***********
+ERROR [2018-07-20 11:29:46] Origin [编辑css模板] Message [Incorrect decimal value: '默认' for column 'Name' at row 1] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.QuotaCssTempController.ChangeSubmit(QuotaCssTemp Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Quota\QuotaCssTempController.cs:line 109]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-20 11:29:51] Origin [编辑css模板] Message [Incorrect decimal value: '默认' for column 'Name' at row 1] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.QuotaCssTempController.ChangeSubmit(QuotaCssTemp Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Quota\QuotaCssTempController.cs:line 109]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-20 11:31:17] Origin [编辑css模板] Message [Incorrect decimal value: '默认' for column 'Name' at row 1] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.QuotaCssTempController.ChangeSubmit(QuotaCssTemp Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Quota\QuotaCssTempController.cs:line 109]
+***********End***********
+
+

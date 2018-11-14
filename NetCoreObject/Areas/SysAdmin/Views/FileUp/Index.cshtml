@@ -1,0 +1,192 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "";
+}
+<script src="~/lib/jquery/dist/jquery.js"></script>
+@*<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />*@
+<script src="~/lib/clipboard/clipboard.min.js"></script>
+<script type="text/javascript" src="~/lib/layui/layui.js" charset="utf-8"></script>
+<script type="text/javascript" src="~/js/xadmin.js"></script>
+
+<link href="~/css/xadmin.css" rel="stylesheet" />
+<script src="~/js/files/jquery.form.js"></script>
+<script src="~/js/files/jquery.slimscroll.min.js"></script>
+<script src="~/js/files/jquery.tmpl.js"></script>
+<script src="~/js/files/file.js"></script>
+<link href="~/css/file.css" rel="stylesheet" />
+<link href="~/css/font.css" rel="stylesheet" />
+
+
+
+
+<!-- 地址 -->
+<div class="fyt-file-tool">
+    <div class="layui-form-item">
+        <label for="RoleName" class="layui-form-label" style="width: 60px;">目录</label>
+        <div class="layui-input-inline" style="width: 520px;">
+            <input type="text" id="path" name="path" class="layui-input" disabled="disabled" value="/upload/" style="width:  100%;"/>
+        </div>
+        <div class="layui-input-inline" style="width:100px">
+            <button type="button" class="layui-btn" id="btn-menu" data-tyle="no" data-model="1" style="width:100%"><i class="fa fa-bars"></i></button>
+        </div>
+    </div>
+</div>
+<!-- 区域 -->
+<div class="fyt-file-wall">
+    <!-- 表格模式 -->
+    <table id="tables" class="file-table hidden" cellspacing="0">
+        <thead>
+            <tr>
+                <th width="45%">名称</th>
+                <th>类型</th>
+                <th>大小</th>
+                <th width="20%">修改时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="trows"></tbody>
+    </table>
+    <script id="tlist" type="text/x-jquery-tmpl">
+        <tr>
+            <td>
+                {{if ext=="文件夹"}}
+                {{html '<i class="im-files text-navy"></i> <a href="javascript:void(0)" class="text-navy" onclick="OpenFolder(\''+name+'\')">'+name+'</a>'}}
+                {{else}}
+                {{html '<i class="im-images text-navy"></i> <a href="javascript:void(0)" style="color: #333" onclick="SetFile(\''+name+'\')">'+name+'</a>'}}
+                {{/if}}
+            </td>
+            <td>${ext}</td>
+            <td>{{html f.fileSizes(size)}}</td>
+            <td>${getFullDate(time)}</td>
+            <td><a href="javascript:void(0)" onclick="delFolder('${name}','${ext}')" class="text-navy f14"><i class="im-close2"></i></a></td>
+        </tr>
+    </script>
+    <!-- 方格模式 -->
+    <ul class="fyt-flist"></ul>
+</div>
+<!-- 底部 -->
+<!-- 地址 -->
+<div class="fyt-file-tool">
+    <div class="layui-form-item">
+        <label for="fileUrl" class="layui-form-label" style="width: 60px;">Url地址</label>
+        <div class="layui-input-inline" style="width: 520px;">
+            <input type="text" id="fileUrl" name="fileUrl" class="layui-input" value="" style="width:  100%;" />
+        </div>
+        <div class="layui-input-inline" style="width:100px">
+            <button class="layui-btn fsave" type="button" style="width:100%">确定</button>
+        </div>
+    </div>
+</div>
+<div class="fyt-file-tool p0">
+    <form id="forms" method="post" class="form-horizontal layui-form">
+        <div class="layui-form-item">
+            <label for="fileUrl" class="layui-form-label" style="width: 60px;">上传文件</label>
+            <div class="layui-input-inline soa-file-foot" style="width:60%">
+                <button type="button" class="layui-btn sign-up" style="width: 120px;"> 选择文件上传</button>
+                <input type="file" id="fileUp" name="fileUp">
+                <div style="display: inline-block;margin-left: 20px;">
+                    <input type="checkbox" id="isthum" name="isthum" lay-skin="primary" title="生成缩略图">@*<label for="isthum">是否生成缩略图</label>*@
+                    <input type="checkbox" id="isWater" name="isWater" lay-skin="primary" title="添加水印">@*<label for="isWater">是否添加水印</label>*@
+                </div>
+            </div>
+            
+        </div>
+    </form>
+</div>
+<!-- 区域 -->
+<input type="hidden" name="httpUrl" id="httpUrl" value="@ViewBag.httpUrl" />
+<div class="soa-select-ftype hidden">
+    <p class="alert alert-info alea-if">请选择直接上传或者到管理器选择图片</p>
+    <div class="soa-select-ftype-btn">
+        <button type="button" class="layui-btn deepred">选择文件</button>
+        <button type="button" class="layui-btn">图库管理</button>
+    </div>
+</div>
+<script type="text/javascript">
+      var index = parent.layer.getFrameIndex(window.name);
+      var v = getUrlParam("fields");
+      var frameId = getUrlParam("frameId");
+      var cltype = getUrlParam("cltype");
+      var spath = "/upload/";
+      $(function () {
+          $(".fsave").click(function () {
+              var val = $('#fileUrl').val();
+              if (!val) {
+                  alert('请选择图片');
+                  return;
+              }
+              if (frameId == "uecloud") {
+                  val = $("#httpUrl").val() + val;
+              }
+              //if (frameId == "articleframe") {
+              //    var pframeId = getUrlParam("pframeId");
+              //    var pw = $(parent.window.frames[pframeId]).contents().find("#articleframe");
+              //    if (cltype == "sign") {
+              //        var domid = getUrlParam("domid");
+              //        $(pw)[0].contentWindow.cloudSign(val, domid);
+              //    }
+              //    else if (cltype == "shops") {
+              //        $(pw)[0].contentWindow.selShopCloud(val);
+              //    }
+              //    else if (cltype == "ue") {
+              //        $(pw)[0].contentWindow.ueinsertfile(val);
+              //    } else {
+              //        $(pw).contents().find("#" + v).val(val);
+              //    }
+
+              //}
+              ////弹出页面使用的方式
+              //else if (frameId.indexOf('layui-layer-iframe') > -1) {
+              //    var frames = window.parent.window.document.getElementById(frameId);
+              //    //判断是否选择图片，并且给单个图片赋值
+              //    if (cltype == "sign") {
+              //        $(frames).cloudSign(im);
+              //    } else {
+              //        $(frames).contents().find("#" + v).val(val);
+              //    }
+              //}
+              //else {
+              //    //判断是否选择图片，并且给单个图片赋值
+              //    if (cltype == "sign") {
+              //        var domid = getUrlParam("domid");
+              //        $(window.parent.$("#" + frameId))[0].contentWindow.cloudSign(val, domid);
+              //    }
+              //    else if (cltype == "ue") {
+              //        $(window.parent.$("#" + frameId))[0].contentWindow.ueinsertfile(val);
+              //    }
+              //    else {
+              //        $(parent.window.frames[frameId]).contents().find("#" + v).val(val);
+              //    }
+              //}
+              x_admin_close(val);
+              //parent.layer.close(index);
+          });
+          $(".fyt-file-wall").slimScroll({
+              height: '325px'
+          });
+          initFiles($("#path").val());
+
+          $("#btn-menu").click(function () {
+              var isback = $("#btn-menu").attr("data-tyle");
+              if (isback == "yes") {
+                  OpenParentFolder();
+              } else {
+                  if ($("#btn-menu").attr("data-model") == 1) {
+                      $(".fyt-flist").addClass("hidden");
+                      $("#tables").removeClass("hidden");
+                      $("#btn-menu").attr("data-model", "2");
+                  } else {
+                      $(".fyt-flist").removeClass("hidden");
+                      $("#tables").addClass("hidden");
+                      $("#btn-menu").attr("data-model", "1");
+                  }
+              }
+          });
+
+      });
+</script>
+
+
+
+

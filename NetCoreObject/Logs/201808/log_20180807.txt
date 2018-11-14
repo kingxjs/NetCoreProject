@@ -1,0 +1,14 @@
+***********Begin***********
+ERROR [2018-08-07 14:47:16] Origin [编辑用户] Message [Duplicate entry 'wangxj@zkey.cc' for key 'Email_UNIQUE'] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.UpdateableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.ChangeSubmit(QuotaUserRel Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\GuestUserController.cs:line 325]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-07 14:50:00] Origin [编辑用户] Message [Duplicate entry 'wangxj@zkey.cc' for key 'Email_UNIQUE'] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.UpdateableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.ChangeSubmit(QuotaUserRel Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\GuestUserController.cs:line 325]
+***********End***********
+
+

@@ -1,0 +1,50 @@
+***********Begin***********
+ERROR [2018-07-02 12:16:12] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:16:18] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:16:18] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:16:18] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:16:18] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:16:19] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:16:19] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:16:19] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:16:31] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-02 12:17:31] Origin [编辑菜单] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 76]
+***********End***********
+
+

@@ -1,0 +1,153 @@
+***********Begin***********
+ERROR [2018-07-04 12:03:10] Origin [编辑菜单] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.ChangeSubmit(SysMenu menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 88]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 12:04:05] Origin [获取项目组列表] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 12:04:07] Origin [获取项目组列表] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 12:04:34] Origin [获取项目组列表] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 12:13:43] Origin [获取项目组列表] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 12:13:46] Origin [获取项目组列表] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 12:13:48] Origin [获取项目组列表] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 12:13:48] Origin [获取项目组列表] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 12:13:49] Origin [获取项目组列表] Message [Table 'zkey_users.sys_menu' doesn't exist] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 14:19:41] Origin [获取项目组列表] Message [MySql.Data.dll Nuget更新到 6.10.4 版本的(Core 2.0只支持当前版本), 再检查连接字符串是否正确，There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 14:42:08] Origin [获取系统用户列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 116]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 14:58:56] Origin [获取项目组列表] Message [Object reference not set to an instance of an object.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 106]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 14:58:56] Origin [获取系统角色列表] Message [Object reference not set to an instance of an object.] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize)
+   at SqlSugar.QueryableProvider`1.<>c__DisplayClass101_0.<ToPageList>b__0()
+   at SqlSugar.UtilMethods.GetOldValue[T](T value, Action action)
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysRoleController.GetList(Int32 limit, Int32 page, String Name, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysRoleController.cs:line 86]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 15:04:24] Origin [获取系统角色列表] Message [Object reference not set to an instance of an object.] Source [   at MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at MySql.Data.MySqlClient.MySqlConnection.Close()
+   at SqlSugar.AdoProvider.Close()
+   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysRoleController.GetList(Int32 limit, Int32 page, String Name, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysRoleController.cs:line 86]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 15:04:24] Origin [获取项目组列表] Message [Fatal error encountered during command execution.] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 55]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-04 15:23:36] Origin [获取系统用户列表] Message [MySql.Data.dll Nuget更新到 6.10.4 版本的(Core 2.0只支持当前版本), 再检查连接字符串是否正确，Fatal error encountered during command execution.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 116]
+***********End***********
+
+

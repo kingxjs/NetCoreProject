@@ -1,0 +1,124 @@
+***********Begin***********
+ERROR [2018-07-19 10:28:09] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:28:12] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:28:13] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:28:14] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:28:14] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:28:16] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:28:16] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:28:22] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:28:23] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:29:18] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 65]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:29:20] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 71]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:37:10] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 90]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:37:12] Origin [获取文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.GetList(String Name, String QuotaID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 90]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-19 10:37:38] Origin [编辑文章类型] Message [Incorrect table name ' '] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.GoodTypeController.ChangeSubmit(SwGoodType Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\Goods\GoodTypeController.cs:line 131]
+***********End***********
+
+

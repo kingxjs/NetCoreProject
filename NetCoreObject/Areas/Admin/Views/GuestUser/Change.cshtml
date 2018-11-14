@@ -1,0 +1,158 @@
+﻿@using NetCoreObject.Core
+@model UserInfo
+@{
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+}
+<form class="layui-form" lay-filter="userForm">
+    @Html.HiddenFor(model => model.UserID)
+    <div class="layui-form-item">
+        <label for="FullName" class="layui-form-label">姓名</label>
+        <div class="layui-input-inline">
+            <input type="text" id="FullName" name="FullName" required="" lay-verify="FullName"
+                   autocomplete="off" class="layui-input" value="@Model.FullName">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="UserAccount" class="layui-form-label">用户名</label>
+        <div class="layui-input-inline">
+            <input type="text" id="UserAccount" name="UserAccount" required="" lay-verify="UserAccount"
+                   autocomplete="off" class="layui-input" value="@Model.UserAccount">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label for="Mobile" class="layui-form-label">
+            <span class="x-red">*</span>手机
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Mobile" name="Mobile" required="" lay-verify="MobileEmail"
+                   autocomplete="off" class="layui-input" value="@Model.Mobile">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label for="Email" class="layui-form-label">
+            <span class="x-red">*</span>邮箱
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Email" name="Email" required="" lay-verify="MobileEmail"
+                   autocomplete="off" class="layui-input" value="@Model.Email">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="UserPassword" class="layui-form-label">
+            密码
+        </label>
+        <div class="layui-input-inline">
+            <input type="password" id="UserPassword" name="UserPassword" lay-verify="UserPassword"
+                   autocomplete="off" class="layui-input" value="">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">性别</label>
+        <div class="layui-input-block">
+            <input type="radio" name="Gender" value="1" title="男" @(Model.Gender == 1 ? "checked" : "")>
+            <input type="radio" name="Gender" value="0" title="女" @(Model.Gender == 0 ? "checked" : "")>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">状态</label>
+        <div class="layui-input-block">
+            <input type="radio" name="Status" value="true" title="启用" @(Model.Status ? "checked" : "")>
+            <input type="radio" name="Status" value="false" title="停用" @(!Model.Status ? "checked" : "")>
+        </div>
+    </div>
+
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">备注</label>
+        <div class="layui-input-block">
+            <textarea placeholder="请输入内容" name="Remark" id="Remark" class="layui-textarea">@Model.Remark</textarea>
+        </div>
+    </div>
+
+
+    <div class="layui-form-item  layui-hide">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <input type="button" lay-submit="" lay-filter="form-submit" id="form-submit" value="保存">
+    </div>
+</form>
+<script>
+    layui.use(['form', 'layer'], function () {
+        $ = layui.jquery;
+        var form = layui.form
+            , layer = layui.layer;
+
+        //自定义验证规则
+        form.verify({
+            NickName: function (value) {
+
+                if (value.length < 3) {
+                    return '昵称至少得3个字符啊';
+                }
+            }
+            , UserPassword: function (value) {
+                var passReg = /^(?=^.{8,30}$)(?=.*\d)(?=.*[A-Za-z])(?!.*\n).*$/;
+                if (value) {
+                    if (!passReg.test(value)) {
+                        return '密码必须包含数字，必须包含小写或大写字母，长度8到30位';
+                    }
+                }
+            }
+            , MobileEmail: function (value) {
+                var mobile = $("#Mobile").val();
+                var email = $("#Email").val();
+                if (!mobile && !email) {
+                    return '手机和邮箱必须填一个';
+                }
+                if (mobile) {
+                    var mobileReg = /^(13[0-9]{9})|(18[0-9]{9})|(14[0-9]{9})|(17[0-9]{9})|(15[0-9]{9})$/;
+
+                    var dianxin = /^1[3578][01379]\d{8}$/;
+                    var liantong = /^1[34578][01256]\d{8}$/;
+                    var yidong = /^(134[012345678]\d{7}|1[34578][012356789]\d{8})$/;
+                    if (!mobileReg.test(mobile)) {
+                        return '手机号格式不正确';
+                    }
+                }
+                if (email) {
+                    var emailReg = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+                    if (!emailReg.test(email)) {
+                        return '邮箱格式不正确';
+                    }
+                }
+            }
+        });
+        //监听提交
+        form.on('submit(form-submit)', function (data) {
+            $.ajax({
+                'type': 'post',
+                'url': '/Admin/GuestUser/ChangeSubmit',
+                'data': data.field,
+                //async: false,
+                error: function (message) {
+                    x_admin_msg("保存失败");
+                    console.info(message)
+                },
+                success: function (data) {
+
+                    if (data.status == 200) {
+                        x_admin_alert("保存成功", { icon: 6 }, function (iindex) {
+                            x_admin_close_index(iindex)
+                            //x_admin_table_reload("userTable");
+                            // 获得frame索引
+
+                            x_admin_close();
+                        });
+                    } else {
+                        x_admin_msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+
+
+    });
+</script>

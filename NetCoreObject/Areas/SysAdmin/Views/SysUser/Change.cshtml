@@ -1,0 +1,147 @@
+﻿@using NetCoreObject.Core
+@model SysUser
+@{
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+    var role_list = ViewBag.RoleList as List<SysRole>;
+    var rel_list = ViewBag.RelRoleList as List<string>;
+}
+<style>
+    .layui-form-checkbox[lay-skin=primary] {
+        height: 30px !important;
+    }
+</style>
+<form class="layui-form" lay-filter="userForm">
+    @Html.HiddenFor(model => model.SysUserID)
+    <div class="layui-form-item">
+        <label for="SysNickName" class="layui-form-label">
+            <span class="x-red">*</span>昵称
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="SysNickName" name="SysNickName" required="" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@Model.SysNickName">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="SysNickName" class="layui-form-label">
+            <span class="x-red">*</span>用户名
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="SysUserName" name="SysUserName" required="" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@Model.SysUserName">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label"><span class="x-red">*</span>角色</label>
+        <div class="layui-input-block">
+            @{
+                foreach (var item in role_list)
+                {
+                    <input type="checkbox" name="RoleID" lay-skin="primary" value="@item.RoleID" title="@item.RoleName" @(rel_list.Contains(item.RoleID) ? "checked" : "")>
+                }
+            }
+        </div>
+    </div>
+
+    
+    <div class="layui-form-item">
+        <label for="SysNickName" class="layui-form-label">
+            密码
+        </label>
+        <div class="layui-input-inline">
+            <input type="password" id="SysUserPwd" name="SysUserPwd" required=""
+                   autocomplete="off" class="layui-input" value="">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <button class="layui-btn" lay-filter="add" lay-submit="">
+            保存
+        </button>
+    </div>
+</form>
+@*<script type="text/html" id="EditDemo">
+    <input type="checkbox" name="Edit" data-id="{{d.QuotaID}}" lay-skin="switch" lay-filter="JurisdictionFun" lay-text="ON|OFF" title="编辑"  {{ d.Edit ? 'checked' : '' }}>
+</script>
+<script type="text/html" id="AddDemo">
+    <input type="checkbox" name="Add" data-id="{{d.QuotaID}}" lay-skin="switch" lay-filter="JurisdictionFun" lay-text="ON|OFF" title="添加" {{ d.Add ? 'checked' : '' }}>
+</script>
+<script type="text/html" id="DelDemo">
+    <input type="checkbox" name="Del" data-id="{{d.QuotaID}}" lay-skin="switch" lay-filter="JurisdictionFun" lay-text="ON|OFF" title="删除" {{ d.Edit ? 'checked' : '' }}>
+</script>*@
+<script>
+    layui.use(['form', 'layer','treegrid'], function () {
+        $ = layui.jquery;
+        var form = layui.form
+            , layer = layui.layer
+            , treegrid = layui.treegrid;
+
+        form.on('switch(JurisdictionFun)', function (obj,table) {
+            var elem = $(obj.elem);
+            var trElem = elem.parents('tr');
+            var tableData = treegrid.cache['userTable'];
+            tableData[trElem.data('index')][elem.attr('name')] = obj.elem.checked;
+        });
+        //监听提交
+        form.on('submit(add)', function (data) {
+            var SysUserID = $("#SysUserID").val();
+            var RoleList = [];
+            if (data.field.RoleID instanceof Array) {
+                for (var i = 0; i < data.field.RoleID.length; i++) {
+                    RoleList.push({
+                        RoleID: data.field.RoleID[i]
+                    })
+                }
+            } else {
+                RoleList.push({
+                    RoleID: data.field.RoleID
+                })
+            }
+            var QuotaRelList = [];
+            var checkStatus = treegrid.checkStatus('userTable')
+                , checkdata = checkStatus.data;
+
+            for (var i = 0; i < checkdata.length; i++) {
+                QuotaRelList.push({
+                    QuotaID: checkdata[i].QuotaID,
+                    //Add: checkdata[i].Add,
+                    //Edit: checkdata[i].Edit,
+                    //Del: checkdata[i].Del
+                })
+            }
+
+
+            var obj = {
+                RoleList: RoleList,
+                SysUserID: SysUserID,
+                SysNickName: data.field.SysNickName,
+                SysUserName: data.field.SysUserName,
+                SysUserPwd: data.field.SysUserPwd,
+            };
+            $.ajax({
+                'type': 'post',
+                'url': '/SysAdmin/SysUser/ChangeSubmit',
+                'data': obj,
+                //async: false,
+                error: function (message) {
+                    x_admin_msg("保存失败");
+                    console.info(message)
+                },
+                success: function (data) {
+                    console.info(data)
+                    if (data.status == 200) {
+                        x_admin_alert("保存成功", { icon: 6 }, function (iindex) {
+                            x_admin_close_index(iindex)
+                            x_admin_close();
+                        });
+                    } else {
+                        x_admin_msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+
+
+    });
+</script>

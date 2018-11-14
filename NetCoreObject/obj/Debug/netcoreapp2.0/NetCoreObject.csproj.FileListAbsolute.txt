@@ -1,0 +1,71 @@
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.deps.json
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.runtimeconfig.json
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.runtimeconfig.dev.json
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.dll
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.pdb
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Common.dll
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Core.dll
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Services.dll
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Common.pdb
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Core.pdb
+I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Services.pdb
+I:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csprojResolveAssemblyReference.cache
+I:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csproj.CoreCompileInputs.cache
+I:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.AssemblyInfoInputs.cache
+I:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.AssemblyInfo.cs
+I:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.dll
+I:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.pdb
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.deps.json
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.runtimeconfig.json
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.runtimeconfig.dev.json
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.dll
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.pdb
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Common.dll
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Core.dll
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Services.dll
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Common.pdb
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Core.pdb
+H:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Services.pdb
+H:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csprojAssemblyReference.cache
+H:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csproj.CoreCompileInputs.cache
+H:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.AssemblyInfoInputs.cache
+H:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.AssemblyInfo.cs
+H:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csproj.CopyComplete
+H:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.dll
+H:\Object\NetCoreObject\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.pdb
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.deps.json
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.runtimeconfig.json
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.runtimeconfig.dev.json
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.dll
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.pdb
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Common.dll
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Core.dll
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Services.dll
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Common.pdb
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Core.pdb
+H:\Object\NetCoreObject - 副本\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Services.pdb
+H:\Object\NetCoreObject - 副本\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csprojAssemblyReference.cache
+H:\Object\NetCoreObject - 副本\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csproj.CoreCompileInputs.cache
+H:\Object\NetCoreObject - 副本\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.AssemblyInfoInputs.cache
+H:\Object\NetCoreObject - 副本\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.AssemblyInfo.cs
+H:\Object\NetCoreObject - 副本\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csproj.CopyComplete
+H:\Object\NetCoreObject - 副本\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.dll
+H:\Object\NetCoreObject - 副本\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.pdb
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.deps.json
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.runtimeconfig.json
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.runtimeconfig.dev.json
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.dll
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.pdb
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Common.dll
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Core.dll
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Services.dll
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Common.pdb
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Core.pdb
+H:\Object\NetCoreObjectSimple\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.Services.pdb
+H:\Object\NetCoreObjectSimple\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csprojAssemblyReference.cache
+H:\Object\NetCoreObjectSimple\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csproj.CoreCompileInputs.cache
+H:\Object\NetCoreObjectSimple\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.AssemblyInfoInputs.cache
+H:\Object\NetCoreObjectSimple\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.AssemblyInfo.cs
+H:\Object\NetCoreObjectSimple\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.csproj.CopyComplete
+H:\Object\NetCoreObjectSimple\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.dll
+H:\Object\NetCoreObjectSimple\NetCoreObject\obj\Debug\netcoreapp2.0\NetCoreObject.pdb

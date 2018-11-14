@@ -1,0 +1,199 @@
+﻿@{
+    Layout = "~/Views/Shared/include/_Layout.cshtml";
+}
+<div class="x-body">
+    <div class="layui-row">
+        <div class="layui-form layui-col-md12 x-so demoTable">
+            <input type="text" name="username" id="username" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+            <button class="layui-btn" data-type="reload"><i class="layui-icon">&#xe615;</i></button>
+        </div>
+    </div>
+    <xblock class="demoTable">
+        <button class="layui-btn" data-type="recoveryAll"><i class="fa fa-reply-all"></i>批量恢复</button>
+        <button class="layui-btn layui-btn-danger" data-type="delAll"><i class="layui-icon"></i>批量删除</button>
+        <button class="layui-btn" onclick="reload()"><i class="layui-icon layui-icon-refresh" style="font-size: 14px;"></i>刷新</button>
+    </xblock>
+    <table id="layui-table" class="layui-table" lay-filter="userTable">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="recovery">恢复</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">彻底删除</a>
+</script>
+<script>
+    function reload() {
+        layui.table.reload("userTable")
+    }
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#start' //指定元素
+        });
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#end' //指定元素
+        });
+
+
+    });
+    layui.use('table', function () {
+        var table = layui.table;
+        var $ = layui.$;
+        table.render({
+            elem: '#layui-table'
+            , method: "post"
+            , url: '/Admin/GuestUser/GetList'
+            , cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            , cols: [[
+                { field: 'UserID', type: 'checkbox', fixed: 'left' }
+                , { field: 'UserAccount', title: '用户名' }
+                , { field: 'NickName', title: '昵称' }
+                , { field: 'Gender_toString', title: '性别', sort: true }
+                , { field: 'Email', title: '邮箱' }
+                , { field: 'Mobile', title: '手机' }
+                , { field: 'CreateTime_toString', title: '注册时间', sort: true }
+                , { field: 'right', align: 'center', toolbar: '#barDemo' }
+            ]]
+            , id: 'userTable'
+            , page: {
+                limit: 20 //重新从第 1 页开始
+            }, where: {
+                Name: $('#username').val(),
+                Status: false
+            }
+            , done: function (res, curr, count) {
+                //如果是异步请求数据方式，res即为你接口返回的信息。
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                //console.log(res);
+
+                //得到当前页码
+                //console.log(curr);
+
+                //得到数据总量
+                //console.log(count);
+            }
+        });
+        //监听工具条
+        table.on('tool(userTable)', function (obj) {
+            var data = obj.data;
+            if (obj.event === 'recovery') {
+                x_admin_confirm('确认要恢复吗？', function (index) {
+                    active.recoveryFun(data.UserID);
+                });
+            }
+            if (obj.event === 'del') {
+                x_admin_confirm('确认要彻底删除吗？', function (index) {
+                    active.delFun(data.UserID);
+                });
+            }
+        });
+        var active = {
+            reload: function () {
+                var username = $('#username');
+
+                //执行重载
+                table.reload('userTable', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    , where: {
+                        Name: username.val(),
+                        Status: 2
+                    }
+                });
+            },
+            getCheckData: function () { //获取选中数据
+                var checkStatus = table.checkStatus('userTable')
+                    , data = checkStatus.data;
+                var ids = [];
+                for (var i = 0; i < data.length; i++) {
+                    ids.push(data[i].UserID)
+                }
+                if (ids.length > 0) {
+                    return ids;
+                } else {
+                    x_admin_alert("请选择一项或多项")
+                }
+                return ids;
+            },
+            recoveryAll: function () {
+                var ids = active.getCheckData();
+                if (ids.length > 0) {
+                    x_admin_confirm('确认要恢复吗？', function (index) {
+                        active.recoveryFun(ids.join(","));
+                    });
+                }
+            }
+            , recoveryFun: function (ids) {
+                if (ids) {
+                    var obj = {
+                        ids: ids
+                    };
+                    $.ajax({
+                        'type': 'post',
+                        'url': '/Admin/GuestUser/RecoverySubmit',
+                        'data': obj,
+                        error: function (message) {
+                            layer.msg("恢复失败");
+                            console.info(message)
+                        },
+                        success: function (data) {
+                            if (data.status == 200) {
+                                x_admin_msg('已恢复!', { icon: 1, time: 1000 });
+                                table.reload("userTable");
+                            } else {
+                                x_admin_msg(data.msg);
+                            }
+                        }
+                    });
+                }
+            },
+            delAll: function () {
+                var ids = active.getCheckData();
+                if (ids.length > 0) {
+                    x_admin_confirm('确认要删除吗？', function (index) {
+                        active.delFun(ids.join(","));
+                    });
+                }
+            }
+            , delFun: function (ids) {
+                if (ids) {
+                    var obj = {
+                        ids: ids
+                    };
+                    $.ajax({
+                        'type': 'post',
+                        'url': '/Admin/GuestUser/ThoroughDeleteSubmit',
+                        'data': obj,
+                        error: function (message) {
+                            x_admin_msg("删除失败");
+                            console.info(message)
+                        },
+                        success: function (data) {
+                            if (data.status == 200) {
+                                x_admin_msg('已删除!', { icon: 1, time: 1000 });
+                                table.reload("userTable");
+                            } else {
+                                x_admin_msg(data.msg);
+                            }
+                        }
+                    });
+                }
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>
+

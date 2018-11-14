@@ -1,0 +1,148 @@
+﻿@using NetCoreObject.Core
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+    var taskModel = ViewBag.Task as SysTask;
+}
+<div class="layui-form">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>数据库备份</legend>
+    </fieldset>
+    <blockquote class="layui-elem-quote layui-bg-green">备份SQL格式数据库 → 提示信息 @ViewBag.paths</blockquote>
+    <input type="hidden" name="SqlNumber" id="SqlNumber" value="@ViewBag.SqlNumber" />
+    <div class="layui-form-item">
+        <label for="dataname" class="layui-form-label ">数据库名称</label>
+        <div class="layui-input-block">
+            <input type="text" id="dataname" name="dataname" disabled="disabled" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@ViewBag.database">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="dataurl" class="layui-form-label">名称和位置</label>
+        <div class="layui-input-block">
+            <input type="text" id="dataurl" name="dataurl" lay-verify="required" disabled="disabled"
+                   autocomplete="off" class="layui-input" value="@ViewBag.paths">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <button class="layui-btn" lay-filter="add" lay-submit="">
+            备份
+        </button>
+    </div>
+
+</div>
+<div class="layui-form" style="display:none">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>数据库备份任务</legend>
+    </fieldset>
+    <input type="hidden" name="TaskID" value="" />
+    <div class="layui-form-item">
+        <label for="Cycle" class="layui-form-label ">任务周期</label>
+        <div class="layui-input-inline">
+            <select name="Cycle" lay-verify="required">
+                <option value="1" @(taskModel.Cycle == 1 ? "selected" : "")>每天</option>
+                <option value="3" @(taskModel.Cycle == 3 ? "selected" : "")>每三天</option>
+                <option value="7" @(taskModel.Cycle == 7 ? "selected" : "")>每周</option>
+            </select>
+        </div>
+        <div class="layui-input-inline">
+            <select name="Day">
+                <option value="7" @(taskModel.Day == 7 ? "selected" : "")>周日</option>
+                <option value="1" @(taskModel.Day == 1 ? "selected" : "")>周一</option>
+                <option value="2" @(taskModel.Day == 2 ? "selected" : "")>周二</option>
+                <option value="3" @(taskModel.Day == 3 ? "selected" : "")>周三</option>
+                <option value="4" @(taskModel.Day == 4 ? "selected" : "")>周四</option>
+                <option value="5" @(taskModel.Day == 5 ? "selected" : "")>周五</option>
+                <option value="6" @(taskModel.Day == 6 ? "selected" : "")>周六</option>
+            </select>
+        </div>
+        <div class="layui-input-inline">
+            <input type="text" class="layui-input" name="Time" id="Time" value="@taskModel.Time" placeholder="HH:mm:ss" lay-verify="required" />
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="dataurl" class="layui-form-label">本次时间</label>
+        <div class="layui-input-inline">
+            <input type="text" class="layui-input" name="ThisTime" id="ThisTime" value="@taskModel.ThisTime" disabled placeholder="yyyy-MM-dd HH:mm:ss" />
+        </div>
+
+        <label for="dataurl" class="layui-form-label">下次时间</label>
+        <div class="layui-input-inline">
+            <input type="text" class="layui-input" name="NextTime" id="NextTime" value="@taskModel.NextTime" disabled placeholder="yyyy-MM-dd HH:mm:ss" />
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label for="dataurl" class="layui-form-label">备份位置</label>
+        <div class="layui-input-block">
+            <input type="text" id="dataurl" name="dataurl" lay-verify="required" disabled="disabled"
+                   autocomplete="off" class="layui-input" value="@ViewBag.taskpath">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <button class="layui-btn" lay-filter="task" lay-submit="">
+            开始任务
+        </button>
+    </div>
+</div>
+
+<script>
+    layui.use(['form', 'layer', 'laydate'], function () {
+        $ = layui.jquery;
+        var form = layui.form
+            , layer = layui.layer
+            , laydate = layui.laydate;
+
+        laydate.render({
+            elem: '#Time'
+            , type: 'time',
+
+        });
+        //备份
+        form.on('submit(add)', function (data) {
+            var load_index =x_admin_load();
+            var SqlNumber = $("#SqlNumber").val();
+            var obj = {
+                SqlNumber: SqlNumber,
+            };
+            $.ajax({
+                'type': 'post',
+                'url': '/SysAdmin/SysData/BakBackUp',
+                'data': obj,
+                error: function (message) {
+                    console.info(message)
+                    x_admin_close_index(load_index);
+                    x_admin_msg("备份失败");
+                },
+                success: function (data) {
+                    x_admin_close_index(load_index);
+                    x_admin_msg(data.msg);
+                    window.location.reload();
+                }
+            });
+            return false;
+        });
+        ////开始任务
+        //form.on('submit(task)', function (data) {
+        //    console.info(data.field)
+        //    //$.ajax({
+        //    //    'type': 'post',
+        //    //    'url': '/SysAdmin/SysData/BakBackUp',
+        //    //    'data': obj,
+        //    //    error: function (message) {
+        //    //        console.info(message)
+        //    //    },
+        //    //    success: function (data) {
+        //    //        x_admin_msg(data.msg);
+        //    //        window.location.reload();
+        //    //    }
+        //    //});
+        //    return false;
+        //});
+
+    });
+</script>

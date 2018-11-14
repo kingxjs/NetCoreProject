@@ -1,0 +1,83 @@
+﻿@using NetCoreObject.Core
+@model SysUser
+@{
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+}
+<style>
+    .layui-form-checkbox[lay-skin=primary] {
+        height: 30px !important;
+    }
+</style>
+<form class="layui-form" lay-filter="userForm">
+    @Html.HiddenFor(model => model.SysUserID)
+
+    <div class="layui-form-item">
+        <label for="SysNickName" class="layui-form-label">
+            <span class="x-red">*</span>用户名
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="SysUserName" name="SysUserName" required="" disabled="disabled" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@Model.SysUserName">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="SysNickName" class="layui-form-label">
+            <span class="x-red">*</span>昵称
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="SysNickName" name="SysNickName" required="" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@Model.SysNickName">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <button class="layui-btn" lay-filter="add" lay-submit="">
+            保存
+        </button>
+    </div>
+</form>
+
+<script>
+    layui.use(['form', 'layer'], function () {
+        $ = layui.jquery;
+        var form = layui.form
+            , layer = layui.layer;
+
+
+        //监听提交
+        form.on('submit(add)', function (data) {
+
+            var SysUserID = $("#SysUserID").val();
+            
+            var obj = {
+                SysUserID: SysUserID,
+                SysNickName: data.field.SysNickName,
+            };
+            $.ajax({
+                'type': 'post',
+                'url': '/SysAdmin/SysUser/PersonalSubmit',
+                'data': obj,
+                //async: false,
+                error: function (message) {
+                    x_admin_msg("保存失败");
+                    console.info(message)
+                },
+                success: function (data) {
+                    console.info(data)
+                    if (data.status == 200) {
+                        x_admin_alert("保存成功，重新登录后生效", { icon: 6 }, function (iindex) {
+                            x_admin_close_index(iindex)
+                            x_admin_close();
+                        });
+                    } else {
+                        x_admin_msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+
+
+    });
+</script>

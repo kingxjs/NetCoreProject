@@ -1,0 +1,169 @@
+﻿@using NetCoreObject.Core
+@model SysModule
+@{
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+    var List = ViewBag.List as string;
+}
+<style>
+    .layui-form-label {
+        width: 110px;
+    }
+
+    .layui-input-inline {
+        width: 370px !important;
+    }
+</style>
+
+<form class="layui-form" lay-filter="userForm">
+    @Html.HiddenFor(model => model.ID)
+    @*@Html.HiddenFor(model => model.ParentID)*@
+    <div class="layui-form-item">
+        <label for="Name" class="layui-form-label">
+            <span class="x-red">*</span>模块名称
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Name" name="Name" required="" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@Model.Name">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="ParentID" class="layui-form-label">
+            <span class="x-red">*</span>父级模块
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="ParentID" name="ParentID" placeholder="父级模块"
+                   autocomplete="off" class="layui-input" value="@Model.ParentID">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="Type" class="layui-form-label">
+            类型
+        </label>
+        <div class="layui-input-inline">
+            <select name="Type" id="Type" lay-filter="Type">
+                <option value="1" @(Model.Type == 1 ? "selected" : "")>菜单</option>
+                <option value="2" @(Model.Type == 2 ? "selected" : "")>页面</option>
+                <option value="3" @(Model.Type == 3 ? "selected" : "")>功能</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="Icon" class="layui-form-label">
+            模块图标Class
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Icon" name="Icon" required=""
+                   autocomplete="off" class="layui-input" value="@Model.Icon">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="Href" class="layui-form-label">
+            模块地址
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Href" name="Href"
+                   autocomplete="off" class="layui-input" value="@Model.Href">
+        </div>
+    </div>
+    <div class="layui-form-item Business" style="@(Model.Type==3?"":"display:none")">
+        <label for="Business" class="layui-form-label">
+            业务权限
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Business" name="Business"
+                   autocomplete="off" class="layui-input" value="@Model.Business" placeholder="例：sys:list">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="Mobile" class="layui-form-label">
+            权重
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Sort" name="Sort" required=""
+                   autocomplete="off" class="layui-input" value="@Model.Sort">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="Remarks" class="layui-form-label">
+            备注
+        </label>
+        <div class="layui-input-inline">
+            <textarea name="Remarks" placeholder="请输入内容" class="layui-textarea">@Model.Remarks</textarea>
+        </div>
+    </div>
+    <div class="layui-form-item  layui-hide">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <input type="button" lay-submit="" lay-filter="form-submit" id="form-submit" value="保存">
+    </div>
+</form>
+
+<script>
+    layui.use(['form', 'layer', 'treeselect'], function () {
+            $ = layui.jquery;
+            var form = layui.form
+                , layer = layui.layer
+                , treeselect = layui.treeselect;
+            treeselect(
+                {
+                    elem: "#ParentID",
+                    data:  @Html.Raw(List),//可以是treedata，也可以是 获取treedata的URL地址
+                });
+            //自定义验证规则
+            //form.verify({
+            //    NickName: function (value) {
+            //        if (value.length < 3) {
+            //            return '昵称至少得3个字符啊';
+            //        }
+            //    }
+            //});
+            form.on('select(Type)', function (data) {
+                if (data.value == 3) {
+                    $(".Business").show();
+                } else {
+                    $(".Business").hide();
+                }
+            });
+
+            //监听提交
+            form.on('submit(form-submit)', function (data) {
+                var ID = $("#ID").val();
+                var ParentID = $("#ParentID").val();
+                var obj = {
+                    ID: ID,
+                    ParentID: ParentID,
+                    Name: data.field.Name,
+                    Icon: data.field.Icon,
+                    Href: data.field.Href,
+                    Sort: data.field.Sort,
+                    Business: data.field.Business,
+                    Type: data.field.Type,
+                    Remarks: data.field.Remarks
+                };
+                $.ajax({
+                    'type': 'post',
+                    'url': '/SysAdmin/SysModule/ChangeSubmit',
+                    'data': obj,
+                    //async: false,
+                    error: function (message) {
+                        x_admin_msg("保存失败");
+                        console.info(message)
+                    },
+                    success: function (data) {
+                        console.info(data)
+                        if (data.status == 200) {
+                            x_admin_alert("保存成功", { icon: 6 }, function (iindex) {
+                                x_admin_close_index(iindex)
+                                x_admin_close();
+                            });
+                        } else {
+                            x_admin_msg(data.msg);
+                        }
+                    }
+                });
+                return false;
+            });
+
+
+        });
+</script>

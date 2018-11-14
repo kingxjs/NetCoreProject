@@ -1,0 +1,53 @@
+***********Begin***********
+ERROR [2018-07-11 17:41:36] Origin [获取用户列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize)
+   at SqlSugar.QueryableProvider`1.<>c__DisplayClass101_0.<ToPageList>b__0()
+   at SqlSugar.UtilMethods.GetOldValue[T](T value, Action action)
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 79]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-11 17:42:32] Origin [获取用户列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 79]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-11 17:46:11] Origin [获取用户列表] Message [MySql.Data.dll Nuget更新到 6.10.4 版本的(Core 2.0只支持当前版本), 再检查连接字符串是否正确，There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 79]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-11 17:46:11] Origin [获取用户列表] Message [MySql.Data.dll Nuget更新到 6.10.4 版本的(Core 2.0只支持当前版本), 再检查连接字符串是否正确，Object reference not set to an instance of an object.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 79]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-11 17:46:11] Origin [获取项目组列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 96]
+***********End***********
+
+

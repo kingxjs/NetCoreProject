@@ -1,0 +1,276 @@
+***********Begin***********
+ERROR [2018-08-08 17:01:29] Origin [获取项目组列表] Message [Unknown column 'u.UserID' in 'on clause'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 188
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 126]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:03:35] Origin [获取项目组列表] Message [Unknown column 'u.UserID' in 'on clause'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 188
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 126]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:24:14] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:24:14] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:25:35] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:25:35] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:28:53] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:28:53] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:30:03] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:30:06] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:30:07] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:30:08] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:30:08] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:30:08] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:30:09] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 164
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:32:46] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 170
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID, Boolean isItem) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:32:51] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 170
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID, Boolean isItem) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:32:58] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 170
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID, Boolean isItem) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:32:58] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 170
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID, Boolean isItem) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:32:58] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 170
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID, Boolean isItem) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:32:59] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 170
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID, Boolean isItem) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:32:59] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 170
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID, Boolean isItem) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-08-08 17:41:32] Origin [获取项目组列表] Message [Unknown column 'utr.Jurisdiction' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.<>c__DisplayClass3_0.<GetList>b__0(SqlSugarClient db, QuotaOutsourcing o) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 170
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in I:\Object\NetCoreObject\NetCoreObject.Core\Domain\SugarBase.cs:line 39
+   at NetCoreObject.Areas.Admin.Controllers.User.MemberController.GetList(Int32 limit, Int32 page, String Name, String TeamID, Boolean isItem) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\User\MemberController.cs:line 138]
+***********End***********
+
+

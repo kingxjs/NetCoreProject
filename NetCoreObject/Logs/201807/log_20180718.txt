@@ -1,0 +1,28 @@
+***********Begin***********
+ERROR [2018-07-18 11:05:14] Origin [编辑系统用户] Message [Column 'UserID' cannot be null] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.ChangeSubmit(SysUser Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 234]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-18 11:29:34] Origin [获取平台列表] Message [Collection was modified; enumeration operation may not execute.] Source [   at System.ThrowHelper.ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion()
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.GetList2(Int32 limit, Int32 page, String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 149]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-18 11:30:22] Origin [获取平台列表] Message [Collection was modified; enumeration operation may not execute.] Source [   at System.ThrowHelper.ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion()
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.GetList2(Int32 limit, Int32 page, String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 149]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-18 11:30:30] Origin [获取平台列表] Message [Collection was modified; enumeration operation may not execute.] Source [   at System.ThrowHelper.ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion()
+   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.GetList2(Int32 limit, Int32 page, String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 149]
+***********End***********
+
+

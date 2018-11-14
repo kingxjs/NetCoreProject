@@ -1,0 +1,40 @@
+***********Begin***********
+ERROR [2018-07-16 13:43:27] Origin [登录] Message [Connection must be valid and open.] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.BaseController.setMenuCache() in I:\Object\NetCoreObject\NetCoreObject\MyStart\BaseController.cs:line 112
+   at NetCoreObject.Areas.SysAdmin.Controllers.AccountController.LoginSubmit(String username, String password) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\AccountController.cs:line 62]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-16 14:51:25] Origin [编辑平台] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.ChangeSubmit(QuotaUserInfo Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 122]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-16 14:51:29] Origin [编辑平台] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.ChangeSubmit(QuotaUserInfo Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 122]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-16 14:51:31] Origin [编辑平台] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.ChangeSubmit(QuotaUserInfo Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 122]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-16 14:51:34] Origin [编辑平台] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.ChangeSubmit(QuotaUserInfo Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 122]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-16 14:52:14] Origin [编辑平台] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.ChangeSubmit(QuotaUserInfo Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 122]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-16 14:53:31] Origin [编辑平台] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.QuotaInfoController.ChangeSubmit(QuotaUserInfo Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\QuotaInfoController.cs:line 122]
+***********End***********
+
+

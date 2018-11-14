@@ -1,0 +1,11 @@
+***********Begin***********
+ERROR [2018-08-06 17:23:24] Origin [获取项目组列表] Message [Object reference not set to an instance of an object.] Source [   at MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at MySql.Data.MySqlClient.MySqlConnection.Close()
+   at MySql.Data.MySqlClient.MySqlConnection.Dispose(Boolean disposing)
+   at System.ComponentModel.Component.Dispose()
+   at SqlSugar.AdoProvider.Dispose()
+   at SqlSugar.SqlSugarClient.Dispose()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysModuleController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysModuleController.cs:line 72]
+***********End***********
+
+

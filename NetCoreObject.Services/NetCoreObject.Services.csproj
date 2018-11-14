@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NetCoreObject.Common\NetCoreObject.Common.csproj" />
+    <ProjectReference Include="..\NetCoreObject.Core\NetCoreObject.Core.csproj" />
+  </ItemGroup>
+
+</Project>

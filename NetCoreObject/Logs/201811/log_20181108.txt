@@ -1,0 +1,28 @@
+***********Begin***********
+ERROR [2018-11-08 17:05:34] Origin [消息中心] Message [Collection was modified; enumeration operation may not execute.] Source [   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at SqlSugar.SqlSugarClient.InitMppingInfo(EntityInfo entityInfo)
+   at SqlSugar.SqlSugarClient.InitMppingInfo(Type type)
+   at SqlSugar.SqlSugarClient.InitMppingInfo[T]()
+   at SqlSugar.SqlSugarClient.Queryable[T]()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMessageController.<>c__DisplayClass2_0.<GetList>b__0(SqlSugarClient db, SysMessage o) in H:\Object\NetCoreObject - 副本\NetCoreObject\Areas\SysAdmin\Controllers\SysMessageController.cs:line 34
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in H:\Object\NetCoreObject - 副本\NetCoreObject.Core\Domain\SugarBase.cs:line 30
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMessageController.GetList(Int32 limit, Int32 page, Int32 Type) in H:\Object\NetCoreObject - 副本\NetCoreObject\Areas\SysAdmin\Controllers\SysMessageController.cs:line 31]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-11-08 17:05:34] Origin [消息中心] Message [Collection was modified; enumeration operation may not execute.] Source [   at System.Collections.Generic.List`1.Enumerator.MoveNextRare()
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at System.Linq.Enumerable.Any[TSource](IEnumerable`1 source, Func`2 predicate)
+   at SqlSugar.SqlSugarClient.InitMppingInfo(EntityInfo entityInfo)
+   at SqlSugar.SqlSugarClient.InitMppingInfo(Type type)
+   at SqlSugar.SqlSugarClient.InitMppingInfo[T]()
+   at SqlSugar.SqlSugarClient.Queryable[T]()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMessageController.<>c__DisplayClass2_0.<GetList>b__0(SqlSugarClient db, SysMessage o) in H:\Object\NetCoreObject - 副本\NetCoreObject\Areas\SysAdmin\Controllers\SysMessageController.cs:line 34
+   at NetCoreObject.Core.SugarBase.Command[TOutsourcing](Action`2 func) in H:\Object\NetCoreObject - 副本\NetCoreObject.Core\Domain\SugarBase.cs:line 30
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMessageController.GetList(Int32 limit, Int32 page, Int32 Type) in H:\Object\NetCoreObject - 副本\NetCoreObject\Areas\SysAdmin\Controllers\SysMessageController.cs:line 31]
+***********End***********
+
+

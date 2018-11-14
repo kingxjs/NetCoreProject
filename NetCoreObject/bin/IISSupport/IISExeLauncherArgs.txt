@@ -1,0 +1,8 @@
+-p C:\Program Files\dotnet\dotnet.exe
+-pidFile I:\Object\NetCoreObject\NetCoreObject\bin\IISSupport\pidfile.txt
+-wd I:\Object\NetCoreObject\NetCoreObject
+-a exec "I:\Object\NetCoreObject\NetCoreObject\bin\Debug\netcoreapp2.0\NetCoreObject.dll"
+-pipe e615ce81-6d6e-45d5-b935-ea90085bca44
+-pr NetCoreObject
+-owningPid 7132
+-env ASPNETCORE_CONTENTROOT=I:\Object\NetCoreObject\NetCoreObject|ASPNETCORE_HOSTINGSTARTUPASSEMBLIES=Microsoft.AspNetCore.ApplicationInsights.HostingStartup|ASPNETCORE_ENVIRONMENT=Development|COMPLUS_ForceENC=1|

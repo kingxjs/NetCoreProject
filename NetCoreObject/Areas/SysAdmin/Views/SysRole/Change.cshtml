@@ -1,0 +1,134 @@
+﻿@using NetCoreObject.Core
+@model SysRole
+@{
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+    var menu_list = ViewBag.MenuList as List<SysModule>;
+    var rel_list = ViewBag.RelMenuList as List<string>;
+}
+<form class="layui-form" lay-filter="userForm">
+    @Html.HiddenFor(model => model.RoleID)
+    <div class="layui-form-item">
+        <label for="RoleName" class="layui-form-label">
+            <span class="x-red">*</span>角色名
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="RoleName" name="RoleName" required="" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@Model.RoleName">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label"><span class="x-red">*</span>菜单</label>
+        <div class="layui-input-block">
+            <div style="display:  inline-table;float:  right;" class="demoTable">
+                <input type="button" class="layui-btn layui-btn-sm" data-type="Open" value="展开" />
+            </div>
+            <table id="layui-table" class="layui-table" lay-filter="userTable"></table>
+
+            <div style="display:  inline-table;float:  right;" class="demoTable">
+                <input type="button" class="layui-btn layui-btn-sm" data-type="Open" value="展开" />
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">描述</label>
+        <div class="layui-input-block">
+            <textarea name="Remarks" id="Remarks" placeholder="请输入内容" class="layui-textarea">@Model.Remarks</textarea>
+        </div>
+    </div>
+    <div class="layui-form-item  layui-hide">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <input type="button" lay-submit="" lay-filter="form-submit" id="form-submit" value="保存">
+    </div>
+</form>
+<script type="text/html" id="iconDemo">
+    <i class="fa {{d.Icon}}"></i>
+    <span>{{d.Name}}</span>
+</script>
+
+<script>
+    layui.use(['form', 'layer','treegrid'], function () {
+        $ = layui.jquery;
+        var form = layui.form
+            , layer = layui.layer;
+        var treegrid = layui.treegrid;
+        treegrid.render({
+            elem: '#layui-table'
+            , treeId: 'ID'//树形id字段名称
+            , treeUpId: 'ParentID'//树形父id字段名称
+            , isOpen: false//默认false
+            , treeShowName: 'Name'//以树形式显示的字段
+            , cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            , cols: [[
+                { type: 'checkbox', fixed: 'left' }
+                , { field: 'Name', title: '菜单名', toolbar: '#iconDemo' }
+            ]]
+            , id: 'userTable'
+
+            , done: function (res, curr, count) {
+
+
+            }
+            , data:@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(menu_list))
+        });
+        $('.demoTable .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+        var active = {
+            Open: function () {
+                treegrid.reload('userTable', {
+                    isOpen: true
+                });
+                $("[data-type='Open']").attr("data-type", "Close").data("type", "Close").addClass("layui-btn-danger").val("折叠");
+            },
+            Close: function () {
+                treegrid.reload('userTable', {
+                    isOpen: false
+                });
+                $("[data-type='Close']").attr("data-type", "Open").data("type", "Open").removeClass("layui-btn-danger").val("展开");
+            }
+        };
+        form.on('submit(form-submit)', function (data) {
+            var RoleID = $("#RoleID").val();
+            var ModuleList = [];
+            var checkStatus = treegrid.checkStatus('userTable')
+                , checkdata = checkStatus.data;
+            for (var i = 0; i < checkdata.length; i++) {
+                ModuleList.push({
+                    ID: checkdata[i].ID
+                    })
+            }
+
+            var obj = {
+                ModuleList: ModuleList,
+                RoleID: RoleID,
+                RoleName: data.field.RoleName,
+                Remarks: data.field.Remarks,
+            };
+            $.ajax({
+                'type': 'post',
+                'url': '/SysAdmin/SysRole/ChangeSubmit',
+                'data': obj,
+                //async: false,
+                error: function (message) {
+                    x_admin_msg("保存失败");
+                    console.info(message)
+                },
+                success: function (data) {
+                    if (data.status == 200) {
+                        x_admin_alert("保存成功", { icon: 6 }, function (iindex) {
+                            x_admin_close_index(iindex)
+                            x_admin_close();
+                        });
+                    } else {
+                        x_admin_msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+
+
+    });
+</script>

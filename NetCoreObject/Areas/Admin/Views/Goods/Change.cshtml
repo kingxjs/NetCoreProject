@@ -1,0 +1,167 @@
+﻿@using NetCoreObject.Core
+@model SwGoods
+@{
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+    var TypeList = ViewBag.TypeList as List<SwGoodType>;
+}
+<style>
+    .layui-form-label {
+        width: 110px;
+    }
+
+    .layui-input-inline {
+        width: 370px !important;
+    }
+</style>
+
+<form class="layui-form" lay-filter="userForm">
+    @Html.HiddenFor(model => model.ID)
+    <div class="layui-form-item">
+        <label for="Title" class="layui-form-label">
+            <span class="x-red">*</span>文章标题
+        </label>
+        <div class="layui-input-inline">
+            <input type="text" id="Title" name="Title" lay-verify="required"
+                   autocomplete="off" class="layui-input" value="@Model.Title">
+        </div>
+    </div>
+
+
+    <div class="layui-tab">
+        <ul class="layui-tab-title">
+            <li class="layui-this">基本信息</li>
+            <li>文章内容</li>
+        </ul>
+        <div class="layui-tab-content">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-form-item">
+                    <label for="TypeID" class="layui-form-label">
+                        <span class="x-red">*</span>类型
+                    </label>
+                    <div class="layui-input-inline">
+                        <select name="TypeID" lay-verify="required">
+                            @{
+                                if (TypeList != null)
+                                {
+                                    if (TypeList.Count == 0)
+                                    {
+                                        <option value="">请选择</option>
+                                    }
+                                    foreach (var item in TypeList)
+                                    {
+                                        <option value="@item.ID">@item.Title</option>
+                                    }
+                                }
+                                else
+                                {
+                                    <option value="">请选择</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="GoodsKeys" class="layui-form-label">
+                        关键字
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="GoodsKeys" name="GoodsKeys"
+                               autocomplete="off" class="layui-input layui-tags-input" value="@Model.GoodsKeys">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="IsHot" class="layui-form-label">
+                        属性
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="checkbox" name="IsHot" value="true" lay-skin="primary" title="热门" @(Model.IsHot ? "checked" : "")>
+                        <input type="checkbox" name="IsTop" value="true" lay-skin="primary" title="置顶" @(Model.IsTop ? "checked" : "")>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label for="GoodsKeys" class="layui-form-label">
+                        权重
+                    </label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="Sort" name="Sort"
+                               autocomplete="off" class="layui-input" value="@Model.Sort">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="Status" value="1" title="待编辑" @(Model.Status == 1 ? "checked" : "") />
+                        <input type="radio" name="Status" value="2" title="已发布" @(Model.Status == 2 ? "checked" : "") />
+                        <input type="radio" name="Status" value="3" title="已下架" @(Model.Status == 3 ? "checked" : "") />
+                    </div>
+                </div>
+
+            </div>
+            <div class="layui-tab-item">
+                <script id="Content" name="Content" type="text/plain" style="width: 100%; height: 200px;">
+                    @Html.Raw(Model.Content)
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item layui-hide">
+        <label for="L_repass" class="layui-form-label">
+        </label>
+        <input type="button" lay-submit="" lay-filter="form-submit" id="form-submit" value="保存">
+    </div>
+</form>
+<script type="text/javascript" charset="utf-8" src="~/lib/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="~/lib/ueditor/ueditor.all.js"> </script>
+<script type="text/javascript" charset="utf-8" src="~/lib/ueditor/uecloud.js"></script>
+
+<script>
+    var ue = UE.getEditor('Content');
+
+    layui.use(['form', 'layer', 'jtagsinput'], function () {
+        $ = layui.jquery;
+        var form = layui.form
+            , layer = layui.layer;
+
+        
+
+        //监听提交
+        form.on('submit(form-submit)', function (data) {
+            var ID = $("#ID").val();
+            
+            var obj = {
+                ID: ID,
+                Title: data.field.Title,
+                TypeID: data.field.TypeID,
+                GoodsKeys: data.field.GoodsKeys,
+                IsHot: data.field.IsHot,
+                IsTop: data.field.IsTop,
+                Sort: data.field.Sort,
+                Status: data.field.Status,
+                Content: data.field.Content
+            };
+            $.ajax({
+                'type': 'post',
+                'url': '/Admin/Goods/ChangeSubmit',
+                'data': obj,
+                //async: false,
+                error: function (message) {
+                    x_admin_msg("保存失败");
+                    console.info(message)
+                },
+                success: function (data) {
+                    if (data.status == 200) {
+                        x_admin_alert("保存成功", { icon: 6 }, function (iindex) {
+                            x_admin_close_index(iindex)
+                            x_admin_close();
+                        });
+                    } else {
+                        x_admin_msg(data.msg);
+                    }
+                }
+            });
+            return false;
+        });
+
+
+    });
+</script>

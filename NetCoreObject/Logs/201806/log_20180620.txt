@@ -1,0 +1,20 @@
+***********Begin***********
+ERROR [2018-06-20 10:46:49] Origin [获取项目组列表] Message [Unknown column 'UserName' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 47]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-20 10:47:22] Origin [获取项目组列表] Message [Unknown column 'UserCreateName' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 47]
+***********End***********
+
+

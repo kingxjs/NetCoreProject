@@ -1,0 +1,218 @@
+﻿@{
+    Layout = "~/Views/Shared/include/_Layout.cshtml";
+}
+<div class="x-body">
+    <div class="layui-row">
+        <div class="layui-col-md12">
+            <div style="padding-left: 20px;">
+                <div class="layui-row">
+                    <div class="layui-form layui-col-md12 x-so demoTable">
+                        <input type="text" name="Title" id="Title" placeholder="请输入类型名称" autocomplete="off" class="layui-input" style="width:200px">
+                        <button class="layui-btn" data-type="reload"><i class="layui-icon">&#xe615;</i></button>
+                    </div>
+                </div>
+                <xblock class="demoTable">
+                    <button class="layui-btn layui-btn-danger" data-type="delAll"><i class="layui-icon"></i>批量删除</button>
+                    <button class="layui-btn" data-type="add"  data-bus-type="admin:goods:add"><i class="layui-icon"></i>添加</button>
+                    <button class="layui-btn" onclick="reload()"><i class="layui-icon layui-icon-refresh" style="font-size: 14px;"></i>刷新</button>
+                </xblock>
+                <table id="layui-table" class="layui-table" lay-filter="userTable">
+                    <thead>
+                        <tr></tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" data-id="{{d.ID}}" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+<script type="text/html" id="switchIsHot">
+    <!-- 这里的 checked 的状态只是演示 -->
+    <input type="checkbox" name="IsHot" data-id="{{d.ID}}" value="{{d.IsHot}}" lay-skin="switch" lay-text="ON|OFF" lay-filter="IsHotDemo" {{ d.IsHot == true ? 'checked' : '' }}>
+</script>
+<script type="text/html" id="switchIsTop">
+    <!-- 这里的 checked 的状态只是演示 -->
+    <input type="checkbox" name="IsTop" data-id="{{d.ID}}" value="{{d.IsTop}}" lay-skin="switch" lay-text="ON|OFF" lay-filter="IsTopDemo" {{ d.IsTop == true ? 'checked' : '' }}>
+</script>
+<script type="text/html" id="StatusDemo">
+    {{# if(d.Status==1){ }}
+    <span class="layui-badge layui-bg-green">待修改</span>
+    {{#  }else if(d.Status==2){ }}
+    <span class="layui-badge layui-bg-blue">已发布</span>
+    {{#  }else if(d.Status==3){ }}
+    <span class="layui-badge layui-bg-gray">已下架</span>
+    {{#  } }}
+</script>
+<script>
+    function reload() {
+        layui.table.reload("userTable")
+    }
+    layui.use('laydate', function () {
+        var laydate = layui.laydate;
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#start' //指定元素
+        });
+
+        //执行一个laydate实例
+        laydate.render({
+            elem: '#end' //指定元素
+        });
+
+
+    });
+    layui.use(['form', 'table', 'tree'], function () {
+        var table = layui.table
+            , tree = layui.tree
+            , form = layui.form;
+        var $ = layui.$;
+
+        table.render({
+            elem: '#layui-table'
+            , method: "post"
+            , url: '/Admin/Goods/GetList'
+            , cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            , cols: [[
+                { field: 'ID', type: 'checkbox', fixed: 'left' }
+                , { field: 'Title', title: '标题' }
+                , { field: 'TypeName', title: '类型' }
+                , { field: 'GoodsKeys', title: '关键字' }
+                , { field: 'IsHot', title: '热门', toolbar: '#switchIsHot' }
+                , { field: 'IsTop', title: '置顶', toolbar: '#switchIsTop' }
+                , { field: 'Status', title: '状态', width: 80, toolbar: '#StatusDemo' }
+                , { field: 'Sort', title: '权重', width: 80 }
+                , { field: 'right', align: 'center', title: '操作', toolbar: '#barDemo' }
+            ]]
+            , id: 'userTable'
+            , where: {
+                Name: $('#Title').val(),
+            }, page: {
+                limit: 20 //重新从第 1 页开始
+            }
+            , done: function (res, curr, count) {
+                set_bus_type();
+            }
+        });
+        form.on('switch(IsHotDemo)', function (obj) {
+            active.setstatus($(obj.elem).data("id"), "IsHot", obj.elem.checked);
+        });
+        form.on('switch(IsTopDemo)', function (obj) {
+            active.setstatus($(obj.elem).data("id"), "IsTop", obj.elem.checked);
+        });
+        //监听工具条
+        table.on('tool(userTable)', function (obj) {
+            var data = obj.data;
+            if (obj.event === 'del') {
+                x_admin_confirm('确认要删除吗？', function (index) {
+                    active.delFun(data.ID);
+                    x_admin_close_index(index)
+                });
+            }
+            if (obj.event === 'additem') {
+                active.additem(data.ID);
+            }
+            if (obj.event === 'edit') {
+                active.edit(data.ID);
+            }
+        });
+        var active = {
+            setstatus: function (ID, name, val) {
+                $.ajax({
+                    'type': 'post',
+                    'url': '/Admin/Goods/setStatus',
+                    'data': {
+                        ID: ID,
+                        Name: name,
+                        Value: val
+                    },
+                    error: function (message) {
+                        x_admin_msg("修改失败");
+                        console.info(message)
+                    },
+                    success: function (data) {
+                        x_admin_msg(data.msg);
+                        active.reload();
+                    }
+                });
+            },
+            add: function () {
+
+                x_admin_this_show_btn('添加文章', '/Admin/Goods/Change', 1100, 750, false, reload, true)
+
+            },
+            edit: function (ID) {
+
+                x_admin_this_show_btn('编辑文章', '/Admin/Goods/Change/' + ID, 1100, 750, false, reload, true)
+
+            },
+            reload: function () {
+
+                //执行重载
+                table.reload('userTable', {
+                    where: {
+                        Name: $('#Title').val(),
+                    }
+                });
+            },
+            getCheckData: function () { //获取选中数据
+                var checkStatus = table.checkStatus('userTable')
+                    , data = checkStatus.data;
+                var ids = [];
+                for (var i = 0; i < data.length; i++) {
+                    ids.push(data[i].ID)
+                }
+                if (ids.length > 0) {
+                    return ids;
+                } else {
+                    x_admin_alert("请选择一项或多项")
+                }
+                return ids;
+            },
+            delAll: function () {
+                var ids = active.getCheckData();
+                if (ids.length > 0) {
+                    x_admin_confirm('确认要删除吗？', function (index) {
+                        active.delFun(ids.join(","));
+                        x_admin_close_index(index)
+                    });
+                }
+            }
+            , delFun: function (ids) {
+                if (ids) {
+                    var obj = {
+                        ids: ids
+                    };
+                    $.ajax({
+                        'type': 'post',
+                        'url': '/Admin/Goods/DeleteSubmit',
+                        'data': obj,
+                        error: function (message) {
+                            layer.msg("删除失败");
+                            console.info(message)
+                        },
+                        success: function (data) {
+                            if (data.status == 200) {
+                                layer.msg('已删除!', { icon: 1, time: 1000 });
+                                table.reload("userTable");
+                            } else {
+                                layer.msg(data.msg);
+                            }
+                        }
+                    });
+                }
+            }
+        };
+
+        $('.demoTable .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>

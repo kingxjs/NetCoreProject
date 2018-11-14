@@ -1,0 +1,191 @@
+***********Begin***********
+ERROR [2018-06-29 11:35:38] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:35:39] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:35:44] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:35:45] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:35:46] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:35:46] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:35:55] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:36:05] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:36:07] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:36:13] Origin [获取系统用户列表] Message [Unknown column 'RoleList' in 'field list'] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:38:30] Origin [获取项目组列表] Message [Object reference not set to an instance of an object.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 104]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:38:50] Origin [编辑系统用户] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.ChangeSubmit(SystemUser menu) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 84]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:39:59] Origin [获取系统角色列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysRoleController.GetList(Int32 limit, Int32 page, String Name, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysRoleController.cs:line 59]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:39:59] Origin [获取系统用户列表] Message [English Message : Entity mapping error.No current query in data reader
+Chinese Message : 实体与表映射出错。No current query in data reader] Source [   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.DbBindAccessory.GetEntityList[T](SqlSugarClient context, IDataReader dataReader)
+   at SqlSugar.DbBindProvider.DataReaderToList[T](Type type, IDataReader dataReader)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize)
+   at SqlSugar.QueryableProvider`1.<>c__DisplayClass101_0.<ToPageList>b__0()
+   at SqlSugar.UtilMethods.GetOldValue[T](T value, Action action)
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 63]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:51:01] Origin [编辑系统用户] Message [Duplicate entry '0-2023425697843432000925721593' for key 'PRIMARY'] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.ChangeSubmit(SystemUser Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 128]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:53:10] Origin [编辑系统用户] Message [Duplicate entry '0-2023425697843432000925721593' for key 'PRIMARY'] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.ChangeSubmit(SystemUser Model) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 128]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:55:58] Origin [获取项目组列表] Message [Object reference not set to an instance of an object.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 104]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 11:55:58] Origin [获取系统用户列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 73]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 12:04:15] Origin [获取项目组列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysMenuController.GetList(String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysMenuController.cs:line 53]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-29 17:40:29] Origin [登录] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Common.RedisHelper.Do[T](Func`2 func) in I:\Object\NetCoreObject\NetCoreObject.Common\RedisHelper\RedisHelper.cs:line 933
+   at NetCoreObject.Common.RedisHelper.StringSet[T](String key, T obj, Nullable`1 expiry) in I:\Object\NetCoreObject\NetCoreObject.Common\RedisHelper\RedisHelper.cs:line 66
+   at NetCoreObject.Areas.SysAdmin.Controllers.AccountController.LoginSubmit(String username, String password) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\AccountController.cs:line 51]
+***********End***********
+
+

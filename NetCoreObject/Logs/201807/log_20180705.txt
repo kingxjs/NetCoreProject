@@ -1,0 +1,198 @@
+***********Begin***********
+ERROR [2018-07-05 10:23:32] Origin [获取系统用户列表] Message [Fatal error encountered during command execution.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 116]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:23:32] Origin [获取系统角色列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysRoleController.GetList(Int32 limit, Int32 page, String Name, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysRoleController.cs:line 86]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:23:32] Origin [获取用户列表] Message [Object reference not set to an instance of an object.] Source [   at MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at MySql.Data.MySqlClient.MySqlConnection.Close()
+   at SqlSugar.AdoProvider.Close()
+   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 79]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:26:20] Origin [获取系统用户列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 116]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:26:20] Origin [获取项目组列表] Message [English Message : Entity mapping error.No current query in data reader
+Chinese Message : 实体与表映射出错。No current query in data reader] Source [   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.DbBindAccessory.GetEntityList[T](SqlSugarClient context, IDataReader dataReader)
+   at SqlSugar.DbBindProvider.DataReaderToList[T](Type type, IDataReader dataReader)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize)
+   at SqlSugar.QueryableProvider`1.<>c__DisplayClass101_0.<ToPageList>b__0()
+   at SqlSugar.UtilMethods.GetOldValue[T](T value, Action action)
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 96]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:26:20] Origin [获取系统角色列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysRoleController.GetList(Int32 limit, Int32 page, String Name, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysRoleController.cs:line 86]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:26:30] Origin [获取系统角色列表] Message [Object reference not set to an instance of an object.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysRoleController.GetList(Int32 limit, Int32 page, String Name, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysRoleController.cs:line 86]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:26:30] Origin [获取系统用户列表] Message [No current query in data reader] Source [   at MySql.Data.MySqlClient.MySqlDataReader.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetOrdinal(String name)
+   at SqlSugar.IDataReaderEntityBuilder`1.BindField(ILGenerator generator, LocalBuilder result, PropertyInfo propertyInfo, String fileName)
+   at SqlSugar.IDataReaderEntityBuilder`1.CreateBuilder(Type type)
+   at SqlSugar.DbBindAccessory.<>c__DisplayClass0_0`1.<GetEntityList>b__0()
+   at SqlSugar.ReflectionInoCore`1.GetOrCreate(String cacheKey, Func`1 create)
+   at SqlSugar.ReflectionInoCacheService.GetOrCreate[V](String cacheKey, Func`1 create, Int32 cacheDurationInSeconds)
+   at SqlSugar.DbBindAccessory.GetEntityList[T](SqlSugarClient context, IDataReader dataReader)
+   at SqlSugar.DbBindProvider.DataReaderToList[T](Type type, IDataReader dataReader)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize)
+   at SqlSugar.QueryableProvider`1.<>c__DisplayClass101_0.<ToPageList>b__0()
+   at SqlSugar.UtilMethods.GetOldValue[T](T value, Action action)
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.SysAdmin.Controllers.SysUserController.GetList(Int32 limit, Int32 page, String Name, String RoleID, Boolean Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\SysAdmin\Controllers\SysUserController.cs:line 116]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:33:18] Origin [获取项目组列表] Message [Object reference not set to an instance of an object.] Source [   at MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at MySql.Data.MySqlClient.MySqlConnection.Close()
+   at SqlSugar.AdoProvider.Close()
+   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 96]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:33:18] Origin [获取用户列表] Message [There is already an open DataReader associated with this Connection which must be closed first.] Source [   at MySql.Data.MySqlClient.Interceptors.ExceptionInterceptor.Throw(Exception exception)
+   at MySql.Data.MySqlClient.MySqlCommand.Throw(Exception ex)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.Driver.ReportWarnings(MySqlConnection connection)
+   at MySql.Data.MySqlClient.Driver.CloseQuery(MySqlConnection connection, Int32 statementId)
+   at MySql.Data.MySqlClient.MySqlCommand.Close(MySqlDataReader reader)
+   at MySql.Data.MySqlClient.MySqlDataReader.Close()
+   at MySql.Data.MySqlClient.MySqlConnection.Close()
+   at SqlSugar.AdoProvider.Close()
+   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 79]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:33:48] Origin [获取用户列表] Message [Object reference not set to an instance of an object.] Source [   at SqlSugar.AdoProvider.GetScalar(String sql, SugarParameter[] parameters)
+   at SqlSugar.AdoProvider.GetInt(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCount()
+   at SqlSugar.QueryableProvider`1.Count()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 79]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:33:48] Origin [获取项目组列表] Message [English Message : Entity mapping error.No current query in data reader
+Chinese Message : 实体与表映射出错。No current query in data reader] Source [   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.DbBindAccessory.GetEntityList[T](SqlSugarClient context, IDataReader dataReader)
+   at SqlSugar.DbBindProvider.DataReaderToList[T](Type type, IDataReader dataReader)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize)
+   at SqlSugar.QueryableProvider`1.<>c__DisplayClass101_0.<ToPageList>b__0()
+   at SqlSugar.UtilMethods.GetOldValue[T](T value, Action action)
+   at SqlSugar.QueryableProvider`1.ToPageList(Int32 pageIndex, Int32 pageSize, Int32& totalNumber)
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.GetList(Int32 limit, Int32 page, String Name, Int32 Status) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 96]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:50:25] Origin [设置成员角色] Message [Unknown column 'IsOwner' in 'field list'] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.First()
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.SetIdentity(String id, Boolean value) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 506]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:50:25] Origin [设置成员角色] Message [Unknown column 'IsOwner' in 'field list'] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.First()
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.SetIdentity(String id, Boolean value) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 506]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:52:12] Origin [设置成员权限] Message [Unknown column 'IsOwner' in 'field list'] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.First()
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.SetJurisdiction(String id, String name, Boolean value) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 422]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-07-05 10:52:13] Origin [设置成员权限] Message [Unknown column 'IsOwner' in 'field list'] Source [   at SqlSugar.AdoProvider.GetDataReader(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetData[TResult](KeyValuePair`2 sqlObj)
+   at SqlSugar.QueryableProvider`1._ToList[TResult]()
+   at SqlSugar.QueryableProvider`1.ToList()
+   at SqlSugar.QueryableProvider`1.First()
+   at NetCoreObject.Areas.Admin.Controllers.TeamInfoController.SetJurisdiction(String id, String name, Boolean value) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\TeamInfoController.cs:line 422]
+***********End***********
+
+

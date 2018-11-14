@@ -1,0 +1,145 @@
+﻿@using NetCoreObject.Core
+@{
+    ViewData["Title"] = "PatchAdd";
+    Layout = "~/Views/Shared/include/_Change_Layout.cshtml";
+}
+<div class="layui-form" lay-filter="userForm">
+    <xblock class="demoTable">
+        <button class="layui-btn" data-type="save" lay-submit="">保存</button>
+        <button class="layui-btn" data-type="add"><i class="layui-icon"></i>添加</button>
+        <span>一次最多添加20个</span>
+    </xblock>
+    <p class="layui-bg-red">确保账号手机号邮箱对应同一账号，否则会添加不成功</p>
+    <table id="layui-table" class="layui-table" lay-filter="userTable">
+        <thead>
+            <tr></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+<script>
+
+    layui.use('table', function () {
+        var table = layui.table;
+        var $ = layui.$;
+        table.render({
+            elem: '#layui-table'
+            , cellMinWidth: 80 //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+            , cols: [[
+                { type: 'numbers' },
+                { field: 'NickName', title: '昵称', edit: 'text' }
+                , { field: 'UserAccount', title: '账号', edit: 'text' }
+                , { field: 'Email', title: '邮箱', edit: 'text' }
+                , { field: 'Mobile', title: '手机', edit: 'text' }
+                , { field: 'UserPassword', title: '密码', edit: 'text' }
+                , { field: 'right', align: 'center', toolbar: '#barDemo' }
+            ]]
+            , limit: 20
+            , id: 'userTable'
+            , done: function (res, curr, count) {
+                //如果是异步请求数据方式，res即为你接口返回的信息。
+                //如果是直接赋值的方式，res即为：{data: [], count: 99} data为当前页数据、count为数据总长度
+                //console.log(res);
+
+                //得到当前页码
+                //console.log(curr);
+
+                //得到数据总量
+                //console.log(count);
+            }
+        });
+        var active = {
+            reload: function () {
+                var username = $('#username');
+
+                //执行重载
+                table.reload('userTable', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    , where: {
+                        Name: username.val(),
+                        Status: 1
+                    }
+                });
+            },
+            getCheckData: function () { //获取选中数据
+                var checkStatus = table.checkStatus('userTable')
+                    , data = checkStatus.data;
+                var ids = [];
+                for (var i = 0; i < data.length; i++) {
+                    ids.push(data[i].UserID)
+                }
+                if (ids.length > 0) {
+                    return ids;
+                } else {
+                    x_admin_alert("请选择一项或多项")
+                }
+                return ids;
+            },
+            add: function () {
+                var oldData = table.cache["userTable"] ? table.cache["userTable"] : [];
+                var data1 = { "UserAccount": "", "Email": "", "Mobile": "", "UserPassword": "" };
+                oldData.push(data1);
+                table.reload('userTable', {
+                    data: oldData
+                });
+            },
+            save: function () {
+                var oldData = table.cache["userTable"] ? table.cache["userTable"] : [];
+                if (oldData.length > 0) {
+                    var obj = {
+                        list: oldData
+                    };
+                    $.ajax({
+                        'type': 'post',
+                        'url': '/Admin/GuestUser/BatchAddSubmit',
+                        'data': obj,
+                        error: function (message) {
+                            x_admin_msg("保存失败");
+                            console.info(message)
+                        },
+                        success: function (data) {
+                            if (data.status == 200) {
+                                x_admin_msg('保存成功!', { icon: 1, time: 1000 });
+                                x_admin_close();
+                            } else {
+                                x_admin_msg(data.msg);
+                            }
+                        }
+                    });
+                } else {
+                    x_admin_msg("请添加账号");
+                }
+            },
+            delFun: function (index) {
+                var oldData = table.cache["userTable"];
+                if (oldData) {
+                    oldData.splice(index, 1);
+                }
+                table.reload('userTable', {
+                    data: oldData
+                });
+            }
+        };
+
+        //监听工具条
+        table.on('tool(userTable)', function (obj) {
+            var data_index = obj.tr.data("index");
+            var data = obj.data;
+            if (obj.event === 'del') {
+                x_admin_confirm('确认要删除吗？', function (index) {
+                    active.delFun(data_index)
+                    x_admin_close_index(index);
+                });
+            }
+        });
+        $('.demoTable .layui-btn').on('click', function () {
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+</script>

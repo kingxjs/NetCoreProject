@@ -1,0 +1,49 @@
+***********Begin***********
+ERROR [2018-06-13 12:10:27] Origin [获取用户列表] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 51]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-13 12:12:22] Origin [获取用户列表] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.GetList(Int32 limit, Int32 page, String Name) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 51]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-13 14:39:55] Origin [编辑用户] Message [Queryable.In(params object[] pkValues): Only one primary key] Source [   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.QueryableProvider`1.In[TParamter](TParamter[] pkValues)
+   at SqlSugar.QueryableProvider`1.InSingle(Object pkValue)
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.ChangeSubmit(String UserID, String NickName, String FullName, String UserAccount, String UserPassword, String Email, String Mobile, String Remark, Int32 Status, Int32 State, Int32 Gender) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 86]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-13 14:41:31] Origin [编辑用户] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.ChangeSubmit(String UserID, String NickName, String FullName, String UserAccount, String UserPassword, String Email, String Mobile, String Remark, Int32 Status, Int32 State, Int32 Gender) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 88]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-13 14:43:36] Origin [编辑用户] Message [Object reference not set to an instance of an object.] Source [   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.ChangeSubmit(String UserID, String NickName, String FullName, String UserAccount, String UserPassword, String Email, String Mobile, String Remark, Int32 Status, Int32 State, Int32 Gender) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 88]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-13 14:45:16] Origin [编辑用户] Message [You cannot have no primary key and no conditions] Source [   at SqlSugar.Check.Exception(Boolean isException, String message, String[] args)
+   at SqlSugar.UpdateableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.ChangeSubmit(String UserID, String NickName, String FullName, String UserAccount, String UserPassword, String Email, String Mobile, String Remark, Int32 Status, Int32 State, Int32 Gender) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 124]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-13 17:30:39] Origin [编辑用户] Message [Field 'UserID' doesn't have a default value] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.ChangeSubmit(String UserID, String NickName, String FullName, String UserAccount, String UserPassword, String Email, String Mobile, String Remark, Int32 Status, Int32 State, Int32 Gender) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 130]
+***********End***********
+
+
+***********Begin***********
+ERROR [2018-06-13 17:35:37] Origin [编辑用户] Message [Field 'UserID' doesn't have a default value] Source [   at SqlSugar.AdoProvider.ExecuteCommand(String sql, SugarParameter[] parameters)
+   at SqlSugar.InsertableProvider`1.ExecuteCommand()
+   at NetCoreObject.Areas.Admin.Controllers.GuestUserController.ChangeSubmit(String UserID, String NickName, String FullName, String UserAccount, String UserPassword, String Email, String Mobile, String Remark, Int32 Status, Int32 State, Int32 Gender) in I:\Object\NetCoreObject\NetCoreObject\Areas\Admin\Controllers\GuestUserController.cs:line 130]
+***********End***********
+
+
